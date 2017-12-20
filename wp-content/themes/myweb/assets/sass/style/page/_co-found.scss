@@ -1,0 +1,35 @@
+.box-startups {
+	padding-bottom: 0px;
+
+	.ico_cafe {
+		margin-bottom: 0px;
+	}
+
+	h5 {
+		margin-bottom: 60px;
+	}
+
+	.startups {
+		.bg-color {
+			padding: 100px 0;
+			background-color: rgba($verde, .3);
+		}
+
+		img {
+			max-width: 75%;
+			margin-bottom: 20px;
+		}
+
+		.texto {
+			font-size: 1.8rem;
+			font-weight: $regular;
+			color: #ffffff;
+			line-height: 1.8rem;
+
+			@media all and (max-width: 500px){
+				font-size: 1rem;
+				line-height: 1rem;
+			}
+		}
+	}
+}

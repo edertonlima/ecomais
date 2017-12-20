@@ -1,0 +1,21 @@
+@import 'bootstrap.min.css';
+
+@import 'style/_mixin';
+@import 'style/_reset';
+@import 'style/_variaveis';
+@import 'style/_fonts';
+@import 'style/_estrutura';
+@import 'style/_elementos'; 
+@import 'style/_form';
+@import 'style/_nav';
+@import 'style/_slide';
+@import 'style/_header';
+@import 'style/_footer';
+
+/* PAGES */
+@import 'style/page/_home';
+@import 'style/page/_sobre';
+@import 'style/page/_contato';
+@import 'style/page/_co-found';
+@import 'style/page/_post';
+@import 'style/page/_projetos';

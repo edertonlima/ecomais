@@ -1,0 +1,246 @@
+.post-list {
+	margin-top: 30px;
+
+	.imagem_principal {
+		overflow: hidden;
+		width: 100%;
+		height: 25vh;
+		display: block;
+		line-height: 25vh;
+		text-align: center;
+		position: relative;
+		@include animacao; 
+		
+		.img-list {
+			width: 100%;
+			height: 25vh;
+			display: block;
+			background-size: cover;
+			background-position: center;
+			@include animacao; 
+
+			span {
+				background-color: $verde;
+				display: block;
+				width: 100%;
+				height: 25vh;
+				position: relative;
+				z-index: 9999;
+				opacity: 0;
+				@include animacao;
+			}
+		}
+
+		i {
+			color: #ffffff;
+			font-size: 4rem;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			margin-top: -32px;
+			margin-left: -30px;
+			left: 50%;
+			@include animacao; 
+		}
+
+		img {
+			width: 100%;
+			display: block;
+			@include animacao; 
+		}
+	}
+
+	.box-content {
+		text-align: center;
+		padding: 15px 10px 10px;
+		display: block;
+
+		.container {
+			padding: 0 10px;
+		}
+
+		.ico_list {
+			max-width: 80px;
+		}
+
+		h5 {
+			margin: 10px 0;
+			@include animacao;
+		}
+
+		.date, p {
+			font-weight: $light;
+			display: block;
+		}
+
+		.date {
+			font-size: 1rem;
+			line-height: 1.225rem;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 1rem;
+			line-height: 1.225rem;
+			text-align: justify;
+		}
+	}
+
+	&:hover {
+		.imagem_principal {
+			.img-list {
+				@include scale-rotate();
+
+				span {
+					opacity: .5;
+				}
+			}
+
+			img {
+				opacity: .5;
+				@include scale-rotate();
+			}
+
+			i {
+				opacity: 1;
+			}
+		}
+
+		h5 {
+			color: #000000;
+		}
+	}
+	
+	@media all and (max-width: 900px){
+		width: 50%!important;
+
+		&.col-4:nth-child(2n+1) {
+			@include clear;
+		}
+
+		&:nth-child(3n+1) {
+			clear: none!important;
+
+			&:before, &:after {
+				display: none!important;
+			}
+		}
+	}
+
+	@media all and (max-width: 900px){
+		width: 100%!important;
+	}
+}
+
+.content-post {
+	p {
+		text-align: left;
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+		font-weight: $light;
+		margin-bottom: 20px;
+
+		strong, b {
+			color: $verde;
+			font-weight: $light;
+		}
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	h2, h3, h4, h5 {
+		color: $verde;
+		text-align: left;
+		margin-bottom: 5px;
+		margin-top: 40px;
+		display: block;
+		text-transform: none;
+	}
+
+	ul, ol {
+		margin: 40px 0;
+		display: block;
+		width: 100%;
+
+		li {
+			display: block;
+			width: 100%;
+			text-align: left;
+			font-size: 1.125rem;
+			line-height: 1.5rem;
+			font-weight: $light;
+			margin-bottom: 15px;
+
+			strong, b {
+				color: $verde;
+				font-weight: $light;
+			}
+		}
+	}
+
+	blockquote {
+		margin: 40px 0;
+
+		p, strong, b {
+			font-size: 1.875rem;
+			line-height: 2rem;
+			color: $verde;
+			font-weight: $regular;
+			text-align: center;
+		}
+	}
+
+	h5 {
+		margin: 0 0px 30px;
+		text-align: left;
+	}
+}
+
+.img-destaque {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+}
+
+.autor {
+	.ico {
+		background-color: #595A5C;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.nome-data {
+		display: block;
+		margin-top: 10px;
+		font-size: 1rem;
+		font-weight: $light;
+
+		.nome {
+			text-transform: uppercase;
+			font-weight: $light;
+		}
+	}
+}
+
+h5.veja-mais {
+	margin: 50px 0 30px;
+}
+
+.grid-right {
+	float: right!important;
+	.cont-hover {
+		background: url('../images/ico_seta-right.png') no-repeat center right;
+	}
+}
+
+.grid-left {
+	float: left!important;
+	.cont-hover {
+		background: url('../images/ico_seta-left.png') no-repeat center left;
+	}
+}

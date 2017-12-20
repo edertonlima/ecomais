@@ -1,0 +1,47 @@
+.footer {
+	width: 100%;
+	background-color: $verde;
+	padding: 30px 0;
+	text-align: center;
+
+	.redes {
+		display: block;
+		margin: 0 auto 15px;
+
+		a {
+			display: inline-block;
+			margin: 0 10px;
+			@include animacao;
+
+			img {
+				height: 35px;
+			}
+
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+
+	.tel_footer {
+		background: url('../images/ico_tel.png') no-repeat left center;
+		display: inline-block;
+		margin: 0 auto 20px;
+		padding-left: 35px;
+
+		span {
+			display: block;
+			text-align: left;
+			font-size: 1.1875rem;
+			color: #ffffff;
+			font-weight: $light;
+			text-align: left;
+		}
+	}
+
+	.logo_footer {
+		width: 140px;
+		display: block;
+		margin: 0 auto;
+	}
+}

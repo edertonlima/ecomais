@@ -1,0 +1,2512 @@
+[
+    {
+        "key": "group_597a80f2e43a5",
+        "title": "Categorias",
+        "fields": [
+            {
+                "key": "field_597b4222ab075",
+                "label": "Icone da Categoria",
+                "name": "ico_listagem",
+                "type": "image",
+                "instructions": "Tamanho do ícone:\r\n200px x 170px",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": 200,
+                "min_height": 170,
+                "min_size": "",
+                "max_width": 200,
+                "max_height": 170,
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "categoria_projeto"
+                }
+            ],
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "category"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5989dc397c28f",
+        "title": "Clientes",
+        "fields": [
+            {
+                "key": "field_5989de9b19ff7",
+                "label": "Nome área de clientes",
+                "name": "nome_clientes",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989decf19ff8",
+                "label": "E-mail",
+                "name": "email_clientes",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989df2d19ff9",
+                "label": "Cargo",
+                "name": "sub_título_clientes",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989dc7e90243",
+                "label": "Telefones",
+                "name": "telefones_clientes",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5989dda990244",
+                        "label": "Telefone",
+                        "name": "telefone",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "54"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_597c10f9acd5d",
+        "title": "Configurações",
+        "fields": [
+            {
+                "key": "field_597ff067b29d9",
+                "label": "E-mail contato",
+                "name": "email",
+                "type": "email",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_59827da73443f",
+                "label": "Logo Header",
+                "name": "logo_header",
+                "type": "image",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_598293b12c100",
+                "label": "Telefone 1",
+                "name": "telefone_1",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_598293c52c101",
+                "label": "Telefone 2",
+                "name": "telefone_2",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989ec3264d07",
+                "label": "Endereço",
+                "name": "endereco",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_5989ec3f64d08",
+                "label": "Imagem Mapa",
+                "name": "imagem_mapa",
+                "type": "image",
+                "instructions": "Tamanho da imagem\r\n1600px x 500",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": 1600,
+                "min_height": 500,
+                "min_size": "",
+                "max_width": 1600,
+                "max_height": 500,
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5989eca464d09",
+                "label": "Google Maps",
+                "name": "google_maps",
+                "type": "url",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-geral"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_598a815dc2690",
+        "title": "Conteúdo",
+        "fields": [
+            {
+                "key": "field_598a8184f1232",
+                "label": "Texto principal",
+                "name": "texto_principal",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_598a81d8f1233",
+                "label": "Imagem destaque",
+                "name": "imagem_destaque",
+                "type": "image",
+                "instructions": "Tamanho da imagem\r\n1600px x 500px",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": 1600,
+                "min_height": 500,
+                "min_size": "",
+                "max_width": 1600,
+                "max_height": 500,
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_598a868af1234",
+                "label": "Texto destaque",
+                "name": "texto_destaque",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_598a9614b04d9",
+                "label": "Texto secundário 1",
+                "name": "texto_secundario_1",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_598a9636b04da",
+                "label": "Texto secundário 2",
+                "name": "texto_secundario_2",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "122"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_598b730440b35",
+        "title": "Conteúdo adicional",
+        "fields": [
+            {
+                "key": "field_598b734bdc205",
+                "label": "Imagem",
+                "name": "imagem",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "uploadedTo",
+                "min_width": 1600,
+                "min_height": 500,
+                "min_size": "",
+                "max_width": 1600,
+                "max_height": 500,
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_598b73e543b4c",
+                "label": "Título",
+                "name": "titulo",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_598b7312dc204",
+                "label": "Texto adicional",
+                "name": "texto_adicional",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "text",
+                "toolbar": "basic",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_598b513c5a183",
+        "title": "Descrição listagem do blog",
+        "fields": [
+            {
+                "key": "field_598b515bb20d1",
+                "label": "Descrição",
+                "name": "descricao_listagem_blog",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "256"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_597c05e312238",
+        "title": "Empresa",
+        "fields": [
+            {
+                "key": "field_597c06f624163",
+                "label": "Visão",
+                "name": "visao",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            },
+            {
+                "key": "field_597c074b24164",
+                "label": "Missão e Valores",
+                "name": "missao_valores",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "56"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5989e8cd6116b",
+        "title": "Fornecedor",
+        "fields": [
+            {
+                "key": "field_5989e8cd6ac96",
+                "label": "Nome área de fornecedor",
+                "name": "nome_fornecedor",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989e8cd6b066",
+                "label": "E-mail",
+                "name": "email_fornecedor",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989e8cd6b26e",
+                "label": "Cargo",
+                "name": "sub_título_fornecedor",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989e8cd6b471",
+                "label": "Telefones",
+                "name": "telefones_fornecedor",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5989e8cd7e32c",
+                        "label": "Telefone",
+                        "name": "telefone",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "54"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_598ab08c11a5a",
+        "title": "Ícone listagem",
+        "fields": [
+            {
+                "key": "field_598ab08c1b631",
+                "label": "Icone da Categoria",
+                "name": "ico_listagem_post",
+                "type": "image",
+                "instructions": "Tamanho do ícone:\r\n200px x 170px",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": 200,
+                "min_height": 170,
+                "min_size": "",
+                "max_width": 200,
+                "max_height": 170,
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "category"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_59851d51c8fae",
+        "title": "Ícones de Pagina, Superior",
+        "fields": [
+            {
+                "key": "field_59851f49854f2",
+                "label": "Icones Superior",
+                "name": "ico_page_superior",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_59851f9b854f3",
+                        "label": "Ícone",
+                        "name": "icone",
+                        "type": "image",
+                        "instructions": "Tamanho do ícone:\r\n200px x 170px",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "30",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "all",
+                        "min_width": 200,
+                        "min_height": 170,
+                        "min_size": "",
+                        "max_width": 200,
+                        "max_height": 170,
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5985200a854f4",
+                        "label": "Título",
+                        "name": "titulo",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "70",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "new_lines": "br"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "125"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_598b9956906bc",
+        "title": "Imagem Listagem",
+        "fields": [
+            {
+                "key": "field_598b99670eaa9",
+                "label": "Imagem",
+                "name": "imagem_listagem_post",
+                "type": "image",
+                "instructions": "Tamanho da imagem\r\n500px x 500px",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": 500,
+                "min_height": 500,
+                "min_size": "",
+                "max_width": 500,
+                "max_height": 500,
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5982acddc436d",
+        "title": "Imagem para Listagem",
+        "fields": [
+            {
+                "key": "field_5982acddcf468",
+                "label": "Imagem Listagem",
+                "name": "imagem_listagem",
+                "type": "image",
+                "instructions": "Tamanho sugeridos da imagem:<br>\r\n500px x 500px<br>\r\n500px x 1000px<br>\r\n1000px x 500px<br>",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": 500,
+                "min_height": 500,
+                "min_size": "",
+                "max_width": 1000,
+                "max_height": 1000,
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "projetos"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_598553d31fdb9",
+        "title": "Nós",
+        "fields": [
+            {
+                "key": "field_598553e477f12",
+                "label": "Imagem Destaque",
+                "name": "imagem_destaque_nos",
+                "type": "image",
+                "instructions": "Tamanho da imagem:\r\n1600px x 500px",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": 1600,
+                "min_height": 500,
+                "min_size": "",
+                "max_width": 1600,
+                "max_height": 500,
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5985544177f13",
+                "label": "Equipe",
+                "name": "equipe",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5985546477f14",
+                        "label": "Imagem",
+                        "name": "imagem",
+                        "type": "image",
+                        "instructions": "Tamanho da imagem:\r\n1000px x 400px",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "uploadedTo",
+                        "min_width": 1000,
+                        "min_height": 400,
+                        "min_size": "",
+                        "max_width": 1000,
+                        "max_height": 400,
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5985548f77f15",
+                        "label": "Título",
+                        "name": "titulo",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_598554b977f16",
+                        "label": "Função",
+                        "name": "funcao",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_598554c477f17",
+                        "label": "Texto",
+                        "name": "texto",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "new_lines": "br"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "2"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_597c0785454e0",
+        "title": "Qualidade",
+        "fields": [
+            {
+                "key": "field_597c07968f7cb",
+                "label": "Título",
+                "name": "titulo_qualidade",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_597c07a88f7cc",
+                "label": "Imagem",
+                "name": "imagem_qualidade",
+                "type": "image",
+                "instructions": "Largura da imagem:\r\n300px",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "uploadedTo",
+                "min_width": 300,
+                "min_height": "",
+                "min_size": "",
+                "max_width": 300,
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_597c07f28f7cd",
+                "label": "Descrição",
+                "name": "descricao_qualidade",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "56"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_59855bb14e62b",
+        "title": "Realizamos",
+        "fields": [
+            {
+                "key": "field_59855bc052d38",
+                "label": "Texto",
+                "name": "texto_realizamos",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "2"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_59829973ae6ca",
+        "title": "Redes Sociais",
+        "fields": [
+            {
+                "key": "field_5982997fa1670",
+                "label": "Redes Sociais",
+                "name": "redes_sociais",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_598299c2a1673",
+                        "label": "Ícone",
+                        "name": "icone",
+                        "type": "image",
+                        "instructions": "Tamanho da altura do ícone:\r\n172px",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33.333",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": 172,
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": 172,
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_59829993a1671",
+                        "label": "Nome da rede social",
+                        "name": "nome",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33.333",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_598299aea1672",
+                        "label": "URL",
+                        "name": "url",
+                        "type": "url",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33.333",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-geral"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_597fe14b4b6e5",
+        "title": "SEO",
+        "fields": [
+            {
+                "key": "field_597fe15437a18",
+                "label": "Título do site",
+                "name": "titulo",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_597fe16737a19",
+                "label": "Descrição do site",
+                "name": "descricao",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            },
+            {
+                "key": "field_597fe1968d62b",
+                "label": "Imagem principal",
+                "name": "imagem_principal",
+                "type": "image",
+                "instructions": "Tamanho da imagem:\r\n500px x 500px",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "uploadedTo",
+                "min_width": 500,
+                "min_height": 500,
+                "min_size": "",
+                "max_width": 500,
+                "max_height": 500,
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_597fe314a9722",
+                "label": "Favicon",
+                "name": "favicon",
+                "type": "image",
+                "instructions": "Tamanho da imagem\r\n16px x 16px",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "full",
+                "library": "all",
+                "min_width": 16,
+                "min_height": 16,
+                "min_size": "",
+                "max_width": 16,
+                "max_height": 16,
+                "max_size": "",
+                "mime_types": "ico"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-geral"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_597fead08c2a5",
+        "title": "SEO Listagem de categorias",
+        "fields": [
+            {
+                "key": "field_597fec5d33647",
+                "label": "Título Pagina",
+                "name": "titulo_pagina",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_597fecbb33648",
+                "label": "Descrição da Pagina",
+                "name": "descricao_pagina",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": ""
+            },
+            {
+                "key": "field_597fecdd33649",
+                "label": "Imagem pagina",
+                "name": "imagem_pagina",
+                "type": "image",
+                "instructions": "Tamanho da imagem:\r\n500px x 500px",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": 500,
+                "min_height": 500,
+                "min_size": "",
+                "max_width": 500,
+                "max_height": 500,
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-produtos"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5969370847112",
+        "title": "Slide",
+        "fields": [
+            {
+                "key": "field_5969377082948",
+                "label": "Slide",
+                "name": "slide",
+                "type": "repeater",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5969378d82949",
+                        "label": "Imagem",
+                        "name": "imagem",
+                        "type": "image",
+                        "instructions": "Tamanho mínimo:\r\n1600px x 768px",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33.333",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "uploadedTo",
+                        "min_width": 1600,
+                        "min_height": 768,
+                        "min_size": "",
+                        "max_width": 1600,
+                        "max_height": 768,
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_598280ac334ca",
+                        "label": "Texto principal",
+                        "name": "texto",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33.333",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "new_lines": "br"
+                    },
+                    {
+                        "key": "field_598280d2334cb",
+                        "label": "Texto secundário",
+                        "name": "sub_texto",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33.333",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "new_lines": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "default"
+                }
+            ],
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "category"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ],
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-projetos"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_597fee591a71b",
+        "title": "Slide Produtos",
+        "fields": [
+            {
+                "key": "field_597fee5922ab8",
+                "label": "Slide Produtos",
+                "name": "slide_produtos",
+                "type": "repeater",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_597fee5927509",
+                        "label": "Imagem",
+                        "name": "imagem_slide_produtos",
+                        "type": "image",
+                        "instructions": "Tamanho mínimo:\r\n1600px x 768px",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "uploadedTo",
+                        "min_width": 1600,
+                        "min_height": 768,
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-produtos"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5989d1081d231",
+        "title": "Sonhos",
+        "fields": [
+            {
+                "key": "field_5989d11541cd3",
+                "label": "Imagem",
+                "name": "imagem-sonhos",
+                "type": "image",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5989d14941cd4",
+                "label": "Título",
+                "name": "titulo-sonhos",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989d15e41cd5",
+                "label": "Texto",
+                "name": "texto-sonhos",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "2"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_598a90963c377",
+        "title": "Startups",
+        "fields": [
+            {
+                "key": "field_598a90a6a39bf",
+                "label": "Startups",
+                "name": "startups",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_598a912da39c0",
+                        "label": "Imagem",
+                        "name": "imagem",
+                        "type": "image",
+                        "instructions": "Tamanho da imagem\r\n1600px x 500px",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33.33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "uploadedTo",
+                        "min_width": 1600,
+                        "min_height": 500,
+                        "min_size": "",
+                        "max_width": 1600,
+                        "max_height": 500,
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_598a915da39c1",
+                        "label": "Icone",
+                        "name": "icone",
+                        "type": "image",
+                        "instructions": "Altura máxima de 170px",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33.33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "uploadedTo",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": 170,
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_598a91afa39c2",
+                        "label": "Texto",
+                        "name": "texto",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33.33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 2,
+                        "new_lines": "br"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "122"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_59852c2770498",
+        "title": "Texto de Destaque",
+        "fields": [
+            {
+                "key": "field_59852cb1f9548",
+                "label": "Imagem de Fundo",
+                "name": "imagem_destaque",
+                "type": "image",
+                "instructions": "Tamanho da imagem:\r\n1600px x 500px",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "30",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": 1600,
+                "min_height": 500,
+                "min_size": "",
+                "max_width": 1600,
+                "max_height": 500,
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_59852c39f9546",
+                "label": "Texto Principal",
+                "name": "texto_destaque",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "40",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_59852c74f9547",
+                "label": "Texto Secundário",
+                "name": "sub_texto_destaque",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "30",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "125"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5989e9114f341",
+        "title": "Trabalhe Conosco",
+        "fields": [
+            {
+                "key": "field_5989e91157e98",
+                "label": "Nome área de trabalhe conosco",
+                "name": "nome_trabalhe",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989e911580b8",
+                "label": "E-mail",
+                "name": "email_trabalhe",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989e91158488",
+                "label": "Cargo",
+                "name": "sub_título_trabalhe",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5989e91158681",
+                "label": "Telefones",
+                "name": "telefones_trabalhe",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5989e9116a974",
+                        "label": "Telefone",
+                        "name": "telefone",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "54"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_59854423b03c7",
+        "title": "Conteúdo",
+        "fields": [
+            {
+                "key": "field_5985444bcb651",
+                "label": "Texto longo",
+                "name": "texto_longo",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 5,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "2"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_59855c148f0df",
+        "title": "Ícones de Pagina, Inferior",
+        "fields": [
+            {
+                "key": "field_59855c1499baa",
+                "label": "Icones Inferior",
+                "name": "ico_page_inferior",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_59855c14b33ed",
+                        "label": "Ícone",
+                        "name": "icone",
+                        "type": "image",
+                        "instructions": "Tamanho do ícone:\r\n200px x 170px",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "30",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "all",
+                        "min_width": 200,
+                        "min_height": 170,
+                        "min_size": "",
+                        "max_width": 200,
+                        "max_height": 170,
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_59855c14b37dc",
+                        "label": "Título",
+                        "name": "titulo",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "70",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": "",
+                        "new_lines": "br"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "125"
+                }
+            ],
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "2"
+                }
+            ]
+        ],
+        "menu_order": 2,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_597b5476baa4e",
+        "title": "Detalhes Técnicos do Projetos",
+        "fields": [
+            {
+                "key": "field_5982a7b7a6735",
+                "label": "Definição",
+                "name": "definicao",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_5982a7d3a6736",
+                "label": "Divulgação",
+                "name": "divulgacao",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": ""
+            },
+            {
+                "key": "field_5982a7e4a6737",
+                "label": "Requisitos",
+                "name": "requisitos",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_5982a7f0a6738",
+                "label": "Objetivo",
+                "name": "objetivo",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_5982a828a6739",
+                "label": "Imagem Técnica",
+                "name": "imagem_tecnica",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "full",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "projetos"
+                }
+            ]
+        ],
+        "menu_order": 9,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5982adf789159",
+        "title": "Galeria de Imagens",
+        "fields": [
+            {
+                "key": "field_5982adf79570e",
+                "label": "Itens da Galeria",
+                "name": "galeria",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5982adf7b261b",
+                        "label": "Imagem",
+                        "name": "imagem",
+                        "type": "image",
+                        "instructions": "Largula mínima da imagem:\r\n1600px",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "uploadedTo",
+                        "min_width": 1600,
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5982adf7b29f0",
+                        "label": "Texto após a imagem?",
+                        "name": "texto_galeria",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 2,
+                        "new_lines": "br"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "projetos"
+                }
+            ]
+        ],
+        "menu_order": 9,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]

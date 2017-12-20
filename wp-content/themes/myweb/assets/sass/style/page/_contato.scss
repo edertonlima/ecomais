@@ -1,0 +1,188 @@
+.box-contato {
+	.sub-tituto-page {
+		span {
+			text-align: center;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	.row.row-contato {
+		margin-right: -5px;
+		margin-left: -5px;
+	
+		[class*="col-"] {
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+	}
+
+	.item-contato {
+		.ico-nome {
+			background-color: $verde;
+			height: 80px;
+			width: 100%;
+			display: block;
+			line-height: 80px;
+			padding: 0 10px;
+			text-align: center;
+			@include box-sizing;
+
+			.nome-item, img {
+				display: inline-block;
+			}
+
+			img {
+				vertical-align: middle;
+				position: relative;
+				height: 67px;
+
+				&.ico_cliente {
+					top: -4px;
+				}
+
+				&.ico_fornecedor {
+					top: -10px;
+				}
+			}
+
+			.nome-item {
+				font-weight: $light;
+				color: #fff;
+				font-size: 1.5rem;
+				line-height: 84px;
+				height: 80px;
+
+				&.trabalhe {
+					line-height: 1.5rem;
+					position: relative;
+					top: 15px;
+				} 
+
+				@media all and (max-width: 1000px) and (min-width: 751px){
+					font-size: 1rem;
+
+					&.trabalhe {
+						line-height: 1rem;
+						top: 12px;
+					} 
+				}
+			}
+		}
+
+		h5, .sub-titulo, p {
+			display: block;
+			text-align: center;
+		}
+
+		h5 {
+			font-size: 1.5rem;
+			margin-top: 30px;
+			line-height: 1.5rem;
+			text-transform: uppercase;
+		}
+
+		.sub-titulo {
+			font-size: 1.225rem;
+			font-weight: $light;
+			line-height: 1.5rem;
+			text-align: center;
+			text-transform: uppercase;
+			height: 1.5rem;
+			margin-bottom: 3px;
+		}
+
+		p {
+			font-style: italic;
+			font-size: .9rem;
+			line-height: 1.225rem;
+
+			strong, span {
+				display: block;
+			}
+
+			span {
+				font-weight: $light;
+			}
+
+			strong {
+				font-weight: $regular;
+			}
+		}
+	}
+
+	@media all and (max-width: 750px){
+		.col-4 {
+			width: 100%;
+			margin-bottom: 50px;
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}
+
+.contato-maps {
+	margin: 60px 0;
+	background-size: cover;
+	background-position: center;
+
+	.bg-maps {
+		display: block;
+		background-color: rgba($verde, .5);
+		padding: 100px 0;
+	}
+
+	.box-endereco {
+		background-color: #ffffff;
+		width: 90%;
+		max-width: 630px;
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+		padding: 30px 100px;
+
+		h5 {
+			margin: 15px 0;
+		}
+
+		p, a {
+			font-weight: 100;
+		}
+
+		p {
+			font-size: 1.5rem;
+			line-height: 1.6rem;
+			margin-bottom: 10px;
+		}
+
+		a {
+			font-size: 1.225rem;
+			line-height: 1.5rem;
+			color: $verde;
+			font-style: italic;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		@media all and (max-width: 750px){
+			padding: 30px 50px;
+
+			.ico_cafe {
+				max-width: 100px;
+			}
+
+			p {
+				font-size: 1rem;
+				line-height: 1.1rem;
+			}
+
+			a {
+				font-size: 1rem;
+			}
+		}
+	}
+}

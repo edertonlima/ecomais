@@ -1,0 +1,158 @@
+html {
+	font-size: 100%; 
+}
+
+body {
+	position: relative;
+	min-height: 100vh;
+	//min-width: $width;
+}
+
+body * {
+	font-family: $font-family;
+	color: $cor-txt;
+	font-weight: $regular;
+}
+
+.container {
+	max-width: $width; 
+	width: 100%;
+	padding: 0 $padding-container;
+	margin: 0 auto;
+	position: relative;
+	@include box-sizing();
+	@include clear();
+
+	@media all and (max-width: 1000px){
+		padding-left: ($padding-container)/2;
+		padding-right: ($padding-container)/2;
+	}	
+
+	@media all and (max-width: 600px) {
+		padding-left: ($padding-container)/4;
+		padding-right: ($padding-container)/4;
+	}
+}
+
+.row {
+	display: block;
+	@include clear();
+
+	&:not(.no-padding){
+		margin-right: ($padding-col)*(-1);
+		margin-left: ($padding-col)*(-1);
+
+		[class*="col-"] {
+			padding-right: $padding-col; 
+			padding-left: $padding-col;
+		}
+	}
+
+	&.no-padding {
+		margin: 0;
+	}
+
+	[class*="col-"] {
+		float: left;
+		@include box-sizing();
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	@for $i from 1 through 12 {
+		.col-#{$i} {
+			width: $i*(100%/12);
+		}
+	}
+
+	@for $i from 1 through 12 {
+		.col-m-#{$i} {
+			margin-left: $i*(100%/12);
+		}
+	}
+
+	.col-4:nth-child(3n+1) {
+		@include clear;
+	}
+}
+
+.box-content {
+	@include clear;
+	width: 100%;
+	position: relative;
+	padding: 100px 0;
+
+	&.box-slide {
+		position: relative;
+		z-index: 0;
+		padding: 0;
+	}
+
+	&.no-padding {
+		padding: 0;
+	}
+
+	&.no-padding-bottom {
+		padding-bottom: 0;
+	}
+
+	&.sombra {
+		background: url('../images/bg_sombra.png') repeat-x top left;
+	}
+
+	&.box-page-sobre {
+		padding: 50px 0;
+	}
+
+	&.box-sonhos {
+		padding-bottom: 60px;
+	}
+
+	&.box-content-blog {
+		.container {
+			max-width: 1200px;
+		}
+	}
+
+	.link_page_ancora {
+		position: relative;
+		top: -80px;
+	}
+
+	.link_ancora {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -85px;
+		display: block;
+		text-align: center;
+		width: 170px;
+		z-index: 999;
+		@include animacao;
+
+		span {
+			margin: 0 auto;
+			display: block;
+			font-size: 1rem;
+			line-height: 2rem;
+			color: #ffffff;
+		}
+
+		.fa {
+			color: #ffffff;
+			font-size: 2rem;
+			display: inline-block;
+			border: 1px solid #ffffff;
+			border-radius: 50%;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+		}
+
+		&:hover {
+			opacity: .5;
+		}
+	}
+}
