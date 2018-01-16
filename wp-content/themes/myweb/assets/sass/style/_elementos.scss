@@ -5,9 +5,9 @@ strong {
 h1 {
 	max-width: $wLogo;
 	width: 100%;
-	float: right;
 	z-index: 9999;
 	position: relative;
+	margin-top: 18px;
 	@include animacao();
 
 	a {
@@ -25,141 +25,37 @@ h1 {
 }
 
 h2 {
-	font-size: 1.875rem;
-	line-height: 50px;
-	font-weight: $bold;
-	color: #ffffff;
-	text-align: center;
-	position: relative;
+	line-height: 130px;
 	text-transform: uppercase;
+	margin-top: 127px;
+	border-bottom: 4px solid $verde-limao;
 
-	:not(.title_page) {
-		&:after {
-			content: "";
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 10px;
-			width: 0; 
-			height: 0; 
-			border-left: 30px solid transparent;
-			border-right: 30px solid transparent;
-			border-top: 30px solid #ffffff;
-			position: absolute;
-			bottom: -30px;
-			z-index: 9;
-			left: 50%;
-			margin-left: -30px;
-		}
+	span {
+		font-weight: $bold;
+		color: #000000;
+		font-size: 3rem;
+		top: 8px;
+		position: relative;
 	}
 
-	&.azul {
-		background-color: $azul;
-
-		&:after {
-			border-top-color: $azul;
-		}
-	}
-
-	&.laranja {
-		background-color: $laranja;
-
-		&:after {
-			border-top-color: $laranja;
-		}
-	}
-
-	&.vermelho {
-		background-color: $vermelho;
-
-		&:after {
-			border-top-color: $vermelho;
-		}
-	}
-
-	&.pink {
-		background-color: $pink;
-
-		&:after {
-			border-top-color: $pink;
-		}
-	}
-
-	&.marrom {
-		background-color: $marrom;
-
-		&:after {
-			border-top-color: $marrom;
-		}
-	}
-
-	&.verde-limao {
-		background-color: $verde-limao;
-
-		&:after {
-			border-top-color: $verde-limao;
-		}
-	}
-
-	&.bege {
-		background-color: $bege;
-
-		&:after {
-			border-top-color: $bege;
-		}
+	img {
+		display: inline-block;
+		margin-right: 20px;
+		height: 72px;
+		top: 20px;
+		position: relative;
+		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+		filter: grayscale(100%);
 	}
 }
 
 h3 {
-	font-size: 1.312rem;
-	line-height: 1.312rem;
-	font-weight: $bold;
+	font-size: 2rem;
+	padding-left: 200px;
+	padding-bottom: 10px;
+	color: $verde-limao;
 	text-transform: uppercase;
-
-	&.sub-tituto-page {
-		background-color: $verde;
-		line-height: 80px;
-		height: 80px;
-		width: 100%;
-		float: left;
-
-		img {
-			max-height: 70px;
-			float: left;
-			margin-top: 5px;
-			margin-left: 40px;
-		}
-
-		span {
-			float: left;
-			font-weight: $light;
-			color: #ffffff;
-			font-size: 2rem;
-			line-height: 80px;
-			height: 80px;
-			margin-left: 20px;
-		}
-
-		&.margem {
-			margin: 50px 0;
-		}
-
-		&.center {
-			text-align: center;
-		}
-
-		@media all and (max-width: 750px){
-			img {
-				max-height: 50px;
-				margin-top: 15px;
-				margin-left: 0px;
-			}
-
-			span {
-				font-size: 1.5rem;
-				margin-left: 10px;
-			}
-		}
-	}
+	border-bottom: 4px solid $verde-limao;
 }
 
 h4 {
@@ -191,62 +87,8 @@ h6 {
 p {
 	font-size: $font-size;
 	line-height: $font-size+.5;
-	font-weight: $regular;
-
-	&.sub-tituto {
-		font-weight: $light;
-		font-size: 2.2rem;
-		line-height: 2.2rem;
-		width: 100%;
-		max-width: 490px;
-		display: block;
-		margin: 0 auto;
-		text-align: center;
-
-		&.borda-efeito {
-			&::after {
-				content: '/ / / / / / / / / / / / / / / /';
-				display: block;
-				line-height: 40px;
-				color: $verde;
-				font-size: .5625rem;
-				text-align: center;
-				font-weight: $bold;
-				font-style: italic;
-			}
-		}
-
-		&.sub-titulo-icone {
-			text-transform: uppercase;
-
-			img {
-				display: inline;
-				height: 70px;
-				margin-right: 10px;
-				position: relative;
-				top: 15px;
-			}
-		}
-
-		&.text-content {
-			text-transform: none;
-			font-size: 1.225rem;
-			line-height: 1.5rem;
-			text-align: left;
-			max-width: 100%;
-			padding: 0 30px;
-			@include box-sizing;
-		}
-
-		&.text-content-medium {
-			font-size: 1.8rem;
-			line-height: 2rem;
-			max-width: 650px;
-			max-width: 650px;
-			padding: 0 30px;
-			@include box-sizing;
-		}
-	}
+	font-weight: $light;
+	margin-bottom: 15px;
 
 	&.mini {
 		font-size: 1rem;
@@ -257,12 +99,20 @@ p {
 		font-size: 1.25rem;
 		line-height: (1.25rem)+.5;
 	}
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
 }
 
 .justify-center {
 	text-align: justify;  
 	/*-moz-text-align-last: center;
 	text-align-last: center;*/
+}
+
+.justify {
+	text-align: justify;  
 }
 
 .center {
@@ -317,4 +167,10 @@ text-align: center;
 			color: #ffffff;
 		}
 	}
+}
+
+.ico-texto {
+	display: block;
+	margin: 0 auto 15px;
+	@include clear;
 }

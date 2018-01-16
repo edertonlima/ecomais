@@ -146,7 +146,7 @@
 	});
 </script>
 
-
+<?php /*
 <!-- ZOPIM -->
 <!--Start of Zendesk Chat Script-->
 <script type="text/javascript">
@@ -159,59 +159,94 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 <!-- SUMO -->
 <script src="//load.sumome.com/" data-sumo-site-id="0820f5828ba5ae1d27edd8bde6d74989a0ddbfa73cad0af4f62420486d84f071" async="async"></script>
+*/ ?>
 
 </head>
 <body <?php body_class(); ?>>
 
 	<header class="header">
-		<div class="container">
-			<a href="javascript:" class="menu-mobile"></a>
 
-			<h1>
-				<a href="<?php echo get_home_url(); ?>" title="<?php the_field('titulo', 'option'); ?>">
-					<img src="<?php the_field('logo_header', 'option'); ?>" alt="<?php the_field('titulo', 'option'); ?>">
-				</a>
-			</h1>
+			<a href="javascript:" class="menu-mobile"></a>
 
 			<nav class="nav">
 				<ul class="menu-principal">
-					<li class="">
-						<a href="<?php echo get_home_url(); ?>" title="HOME">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_home.png" alt="HOME">HOME
+					<li class="<?php if(is_page('producao')){ echo 'active'; } ?>">
+						<a href="javascript:" title="PRODUTOS">
+							PRODUTOS
 						</a>
+						<ul>
+							<li class="submenu <?php if(is_page('producao')){ echo 'active'; } ?>">
+								<a href="<?php echo get_permalink(get_page_by_path('producao')); ?>" title="">
+									<img src="<?php the_field('ico_colorido',get_page_by_path('producao')); ?>">
+									<?php echo get_the_title(get_page_by_path('producao')); ?>
+								</a>
+							</li>
+
+							<li class="submenu">
+								<a href="javascript:" title="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-nossos-produtos.png" class="">
+									NOSSOS PRODUTOS
+								</a>
+							</li>
+						</ul>
 					</li>
 
-					<li class="">
+					<li class="<?php if(is_page('sobre')){ echo 'active'; } ?>">
 						<a href="<?php echo get_permalink(get_page_by_path('sobre')); ?>" title="SOBRE">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_sobre.png" alt="SOBRE">SOBRE
+							<?php echo get_the_title(get_page_by_path('sobre')); ?>
 						</a>
 					</li>
 
-					<li class="">
-						<a href="<?php echo get_home_url(); ?>/projetos" title="PROJETOS">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_projetos.png" alt="PROJETOS">PROJETOS
-						</a>
+					<li class="menu-home">
+						<h1>
+							<a href="<?php echo get_home_url(); ?>" title="<?php the_field('titulo', 'option'); ?>">
+								<img src="<?php the_field('logo_header', 'option'); ?>" alt="<?php the_field('titulo', 'option'); ?>">
+							</a>
+						</h1>
 					</li>
 
-					<li class="">
-						<a href="<?php echo get_permalink(get_page_by_path('co-found')); ?>" title="CO-FOUND">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_cofound.png" alt="CO-FOUND">CO-FOUND
+					<li class="<?php if(is_page(array( 'dicas/cortes-de-carnes', 'dicas/toque-do-chef', 'dicas/toque-do-chef/tempero-da-carne', 'dicas/toque-do-chef/carne-x-carne', 'dicas/toque-do-chef/distancia-do-briquete', 'dicas/toque-do-chef/carne-de-primeira' ))){ echo 'active'; } ?>">
+						<a href="javascript:" title="DICAS">
+							DICAS
 						</a>
+						<ul>
+							<li class="submenu <?php if(is_page('dicas/cortes-de-carnes')){ echo 'active'; } ?>">
+								<a href="<?php echo get_permalink(get_page_by_path('dicas/cortes-de-carnes')); ?>" title="<?php echo get_the_title(get_page_by_path('dicas/cortes-de-carnes')); ?>">
+									<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/cortes-de-carnes')); ?>">
+									<?php echo get_the_title(get_page_by_path('dicas/cortes-de-carnes')); ?>
+								</a>
+							</li>
+
+							<li class="submenu <?php if(is_page(array( 'dicas/toque-do-chef', 'dicas/toque-do-chef/tempero-da-carne', 'dicas/toque-do-chef/carne-x-carne', 'dicas/toque-do-chef/distancia-do-briquete', 'dicas/toque-do-chef/carne-de-primeira' ))){ echo 'active'; } ?>">
+								<a href="<?php echo get_permalink(get_page_by_path('dicas/toque-do-chef')); ?>" title="<?php echo get_the_title(get_page_by_path('dicas/toque-do-chef')); ?>">
+									<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/toque-do-chef')); ?>">
+									<?php echo get_the_title(get_page_by_path('dicas/toque-do-chef')); ?>
+								</a>
+							</li>
+
+							<li class="submenu">
+								<a href="javascript:" title="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-harmonizações.png" class="">
+									HARMONIZAÇÕES
+								</a>
+							</li>
+
+							<li class="submenu">
+								<a href="javascript:" title="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-musicas.png" class="">
+									MÚSICAS
+								</a>
+							</li>
+						</ul>
 					</li>
 
-					<li class="">
-						<a href="<?php echo get_home_url(); ?>/blog" title="BLOG">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_blog.png" alt="BLOG">BLOG
-						</a>
-					</li>
-
-					<li class="">
+					<li class="<?php if(is_page('contato')){ echo 'active'; } ?>">
 						<a href="<?php echo get_permalink(get_page_by_path('contato')); ?>" title="CONTATO">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_contato.png" alt="CONTATO">CONTATO
+							CONTATO
 						</a>
 					</li>
 				</ul>
 			</nav>
 
-		</div>
+
 	</header>

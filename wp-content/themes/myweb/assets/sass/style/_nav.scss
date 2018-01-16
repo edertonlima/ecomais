@@ -1,59 +1,97 @@
 .nav {
-	top: -100vh;
-	height: 100vh;
-	line-height: 100vh;
-	display: table;
-	width: 100%;
-	position: fixed;
-	left: 0px;
-	z-index: 999;
+	display: block;
 	@include animacao();
-	background-color: rgba($verde, .95);
 
 	ul {
-		display: table-cell;
-		vertical-align: middle;
-		width: 345px;
+		display: block;
+		margin: 0 auto;
+		width: 665px;
+		text-align: center;
+		position: relative;
+		z-index: 999;
 		@include box-sizing;
 
 		li {
-			display: block;
-			line-height: normal;
-			padding: 10px 0;
+			display: table;
+			margin: 0px 10px;
+			height: 127px;
+			float: left;
+			@include animacao();
 
 			a {
-				display: inline-block;
-				font-size: 2.75rem;
-				line-height: 88px;
+				padding: 0 15px;
+				display: table-cell;
+				vertical-align: middle;
+				font-size: 1.125rem;
 				color: #ffffff;
-				font-weight: $regular;
+				font-weight: $light;
 				text-transform: uppercase;
 				text-decoration: none;
 				@include animacao();
+			}
 
-				img {
-					vertical-align: middle;
-					margin-right: 20px;
+			&:not(.menu-home) { 
+				> a {
+					position: relative;
+					top: 10px;
+				}
+
+				&:hover, &.active {
+					background-color: $verde-limao;
+				}
+
+				&:hover {
+					ul {
+						display: block;
+					}
 				}
 			}
 
-			&:hover, &.active {
-				> a {
-					opacity: .5;
+			ul {
+				background-color: rgba(#000000,.8);
+				height: 160px;
+				width: 100%;
+				text-align: center;
+				position: fixed;
+				top: 134px;
+				left: 0;
+				display: none;
+				z-index: 99;
+				@include animacao;
+
+				li {
+					display: inline-block;
+					height: 160px;
+					margin: 0;
+					padding: 0 20px;
+					float: none;
+
+					a {
+						font-size: 1.125rem;
+						color: #ffffff;
+						font-weight: $light;
+						text-transform: uppercase;
+						text-decoration: none;
+						padding: 20px 0;
+
+						img {
+							margin: 0 auto 10px;
+							display: block;
+							height: 72px;
+						}
+					}
+
+					&:hover, &.active {
+						background-color: rgba(#000000,.4)!important;
+
+						a {
+							color: $verde-limao;
+						}
+					}
 				}
 			}
 
 			@media all and (max-width: 750px){
-				padding: 0 30px;
-
-				a {
-					font-size: 1.75rem;
-					line-height: 45px;
-
-					img {
-						max-width: 60px;
-					}
-				}
 			}
 		}
 	}

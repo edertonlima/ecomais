@@ -1,5 +1,7 @@
 html {
 	font-size: 100%; 
+	width: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -48,6 +50,16 @@ body * {
 		}
 	}
 
+	&.reduzido {
+		margin-right: -2.5px;
+		margin-left: -2.5px;
+
+		[class*="col-"] {
+			padding-right: 2.5px; 
+			padding-left: 2.5px;
+		}
+	}
+
 	&.no-padding {
 		margin: 0;
 	}
@@ -82,12 +94,14 @@ body * {
 	@include clear;
 	width: 100%;
 	position: relative;
-	padding: 100px 0;
+	padding: 30px 0;
 
 	&.box-slide {
 		position: relative;
 		z-index: 0;
 		padding: 0;
+		margin-bottom: 30px;
+		border-bottom: 7px solid $verde-limao;
 	}
 
 	&.no-padding {
@@ -114,6 +128,16 @@ body * {
 		.container {
 			max-width: 1200px;
 		}
+	}
+
+	&.cinza {
+		background-color: #F1F1F2;
+	}
+
+	&.img-destaque {
+		height: 50vh;
+		background-position: center;
+		background-size: cover;
 	}
 
 	.link_page_ancora {
@@ -153,6 +177,31 @@ body * {
 
 		&:hover {
 			opacity: .5;
+		}
+	}
+
+	.img-content {
+		width: auto;
+		max-width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.cont-box {
+		background-color: #F1F1F2;
+		padding: 80px 0 80px;
+		position: relative;
+
+		p {
+			padding-left: 200px;
+		}
+
+		&.ico-cont {
+			img {
+				position: absolute;
+				top: -45px;
+				left: 0;
+			}
 		}
 	}
 }

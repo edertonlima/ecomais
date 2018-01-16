@@ -1,84 +1,23 @@
-.img-nos {
-	display: none;
-}
-
-.equipe {
-	display: block;
+.comprometimento {
 	width: 100%;
+	text-align: center;
 
-	&:first-child {
-		margin-top: 30px;
-	}
+	li {
+		display: inline-block;
+		width: 33%;
 
-	img {
-		width: 100%;
-		display: block;
-	}
-
-	h5, span {
-		text-transform: uppercase;
-	}
-
-	h5, span, p {
-		text-align: center;
-	}
-
-	h5 {
-		margin-top: 40px;
-	}
-
-	span, p {
-		display: block;
-		font-weight: $light;
-	}
-
-	span {
-		font-size: 1.125rem;
-		line-height: 1.125rem;
-		margin-top: 5px
-	}
-
-	p {
-		font-size: 1.125rem;
-		line-height: 1.125rem;
-		margin-top: 5px;
-		margin-bottom: 40px;
-	}
-}
-
-.box-sonhos {
-	.row .col-6 {
-		padding: 0 40px;
-
-		@media all and (max-width: 750px){
-			width: 100%;
-
-			.imagem-sonhos {
-				display: block;
-				margin: 0 auto 30px;
-				max-width: 75%;
-			}
+		img {
+			display: block;
+			margin: 0 auto;
 		}
-	}
 
-	.imagem-sonhos, h5 {
-		margin-top: 30px
-	}
-
-	.imagem-sonhos {
-		max-width: 100%;
-	}
-
-	h5 {
-		display: block;
-		text-align: center;
-		margin-bottom: 20px;
-	}
-
-	p {
-		font-size: 1.225rem;
-		line-height: 1.5rem;
-		display: block;
-		font-weight: $light;
+		span {
+			font-size: $font-size;
+			line-height: $font-size+.5;
+			font-weight: $light;
+			margin: 15px auto 0;
+			display: block;
+			max-width: 200px;
+		}
 	}
 }

@@ -1,6 +1,5 @@
 .slide {
 	height: $hSlide;
-	background-color: $verde;
 	
 	.item {
 		width: 100%;
@@ -14,7 +13,7 @@
 			width: 100%;
 			height: $hSlide;
 			line-height: $hSlide;
-			background-color: rgba($verde, .8);
+			//background-color: rgba($verde, .8);
 		}
 
 		.box-texto {
@@ -36,10 +35,12 @@
 				text-align: center;
 				display: block;
 				padding: 0 50px;
+				text-shadow: 1px 1px 1px #000;
 
 				&.texto {
 					font-size: 1.575rem;
 					line-height: 1.575rem;
+					font-weight: $bold;
 
 					&.category-name {
 						font-weight: $light;
@@ -49,8 +50,8 @@
 
 				&.sub-texto {
 					margin-top: 15px;
-					font-size: 1.5625rem;
-					line-height: 1.5625rem;
+					font-size: 1.3625rem;
+					line-height: 1.3625rem;
 					font-weight: $light;
 				}
 
@@ -143,16 +144,20 @@
 		margin: 0;
 
 		li {
-			width: 44px;
-			height: 53px;
+			width: 21px;
+			height: 37px;
 			display: inline-block;
-			margin: 0 5px;
+			margin: 0 10px;
 			border: none;
-			background: url('../images/slide_indicators-OFF.png') no-repeat;
-			@include animacao;
+			background: url('../images/indicators.png') no-repeat top left;
+			//@include animacao;
 
 			&.active {
-				background-image: url('../images/slide_indicators-ON.png');
+				background-position: top right;
+			}
+
+			&:hover {
+				opacity: .75;
 			}
 		}
 	}

@@ -1,15 +1,28 @@
 .footer {
+	border-top: 7px solid $verde-limao;
 	width: 100%;
-	background-color: $verde;
+	background-color: #000000;
 	padding: 30px 0;
-	text-align: center;
+
+	.logo_footer {
+		height: 82px;
+		float: left;
+		margin: 0;
+		border-right: 2px solid $verde-limao;
+		padding: 10px 30px 10px;
+	}
 
 	.redes {
-		display: block;
-		margin: 0 auto 15px;
+		float: left;
+		height: 82px;
+		display: table;
+		margin: 0;
+		border-right: 2px solid $verde-limao;
+		padding: 10px 30px 10px;
 
 		a {
-			display: inline-block;
+			display: table-cell;
+			vertical-align: middle;
 			margin: 0 10px;
 			@include animacao;
 
@@ -24,24 +37,40 @@
 	}
 
 	.tel_footer {
-		background: url('../images/ico_tel.png') no-repeat left center;
-		display: inline-block;
-		margin: 0 auto 20px;
-		padding-left: 35px;
+		height: 82px;
+		float: left;
+		margin: 0;
+		border-right: 2px solid $verde-limao;
+		padding: 10px 30px 10px;
+		display: table;
+
+		div {
+			display: table-cell;
+			vertical-align: middle;
+		}
 
 		span {
-			display: block;
-			text-align: left;
-			font-size: 1.1875rem;
+			font-size: $font-size;
 			color: #ffffff;
 			font-weight: $light;
 			text-align: left;
+			display: block;
 		}
 	}
 
-	.logo_footer {
-		width: 140px;
-		display: block;
-		margin: 0 auto;
+	.di20 {
+		height: 82px;
+		float: right;
+		display: table;
+		@include animacao;
+
+		a {
+			display: table-cell;
+			vertical-align: middle;
+
+			&:hover {
+				opacity: .8;
+			}
+		}
 	}
 }

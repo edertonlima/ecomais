@@ -1,73 +1,10 @@
 .header {
-	width: 100%;
-	height: 65px;
+	background-color: #000;
 	position: fixed;
-	top: 60px;
-	left: 0;
+	top: 0px;
+	left: 0px;
 	z-index: 999;
-	@include animacao;
-
-	&.scroll_menu {
-		background-color: rgba($verde, .95);
-		top: 0px;
-
-		h1 {
-			margin-top: 10px;
-			text-align: center;
-			
-			img {
-				max-height: 40px;
-				width: auto;
-			}
-		}
-
-		.menu-mobile {
-			margin: 5px 0;
-		}
-	}
-
-	&.active {
-		top: 80px;
-		background: none;
-
-		h1 {
-			margin-top: 0px;
-			
-			img {
-				max-height: none;
-				width: 100%;
-			}
-		}
-
-		.menu-mobile {
-			margin: 10px 0 0;
-		}
-	}
-
-	@media all and (max-width: 1100px){
-		top: 0px;
-	}
-
-	@media all and (max-width: 750px){
-		&.active {
-			top: 0px;
-
-			.menu-mobile {
-				margin-top: 10px;
-			}
-
-			h1 {
-				margin-top: 15px;
-			}
-		}
-
-		.menu-mobile {
-			margin-top: 10px;
-		}
-
-		h1 {
-			max-width: 100px;
-			margin-top: 15px;
-		}
-	}
+	width: 100%;
+	height: 134px;
+	border-top: 7px solid $verde-limao;
 }

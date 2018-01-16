@@ -46,14 +46,115 @@
 
 		</div>
 	</div>
-
-	<a href="#continue_sonhando" class="link_ancora" title="Continue sonhando">
-		<i class="fa fa-angle-down" aria-hidden="true"></i>
-		<span>CONTINUE SONHANDO</span>
-	</a>
 </section>
 
-<section class="box-content box-content-blog">
+<section class="box-content">
+	<div class="container">
+		
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-texto.png" class="ico-texto">
+		<p class="justify"><?php the_field('texto_longo'); ?></p>
+
+	</div>
+</section>
+
+<section class="box-content">
+	<div class="row reduzido">
+			
+		<ul class="list-item">
+			<li class="col-6">
+				<a href="javascript:" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/produtos.jpg');">
+					<div class="cont-list-item-box">
+						<div class="cont-list-item">
+							<img src="<?php the_field('ico_colorido',get_page_by_path('')); ?>" class="">
+							<span>PRODUTO</span>
+							<p>Conheça os briquetes da Ecomais e como são feitos.</p>
+						</div>
+					</div>
+				</a>
+			</li>
+
+			<li class="col-6">
+				<a href="<?php echo get_permalink(get_page_by_path('dicas/toque-do-chef')); ?>" style="background-image: url('<?php the_field('imagem_listagem',get_page_by_path('dicas/toque-do-chef')); ?>');">
+					<div class="cont-list-item-box">
+						<div class="cont-list-item">
+							<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/toque-do-chef')); ?>">
+							<span><?php echo get_the_title(get_page_by_path('dicas/toque-do-chef')); ?></span>
+							<p><?php echo get_the_excerpt(get_page_by_path('dicas/toque-do-chef')); ?></p>
+						</div>
+					</div>
+				</a>
+			</li>
+
+			<li class="col-6">
+				<a href="javascript:" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hamonizações.jpg');">
+					<div class="cont-list-item-box">
+						<div class="cont-list-item">
+							<img src="<?php the_field('ico_colorido',get_page_by_path('')); ?>" class="">
+							<span>HARMONIZACÕES</span>
+							<p>Para deixar mais delicioso seu churrasco, conheça combinações de bebidas com carnes.</p>
+						</div>
+					</div>
+				</a>
+			</li>
+
+			<li class="col-6">
+				<a href="javascript:" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/musicas.jpg');">
+					<div class="cont-list-item-box">
+						<div class="cont-list-item">
+							<img src="<?php the_field('ico_colorido',get_page_by_path('')); ?>" class="">
+							<span>MÚSICAS</span>
+							<p>Encontre playlists para você ouvir nos seus churrascos com a sua família e amigos.</p>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+	</div>
+</section>
+
+<section class="box-content no-padding onde-comprar" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/mapa.png');">
+	<div class="box-comprar">
+		<span class="tit">ONDE COMPRAR?</span>
+		<div class="select-comprar">
+			<p>Selecione o lugar mais perto para<br>encontrar os produtos Ecomais</p>
+			<div class="col-12">
+				<div class="select">
+					<i class="fa fa-map-marker" aria-hidden="true"></i>
+					<select name="estado" id="estado">
+						<option value="Selecione um Estado">Estado</option>
+						
+						<?php /*
+							foreach ($representantes as $key => $value) { 
+								$estados[] = array(
+									'uf' => $value['uf'],
+									'nome' => $value['estado']
+								);
+							}
+
+							foreach (array_unique($estados) as $estado) { ?>
+								<option value="<?php echo $estado; ?>"><?php echo $estado; ?></option>
+							<?php } */
+						?>									
+
+					</select>
+				</div>
+			</div>	
+
+			<div class="col-12">
+				<div class="select">
+					<i class="fa fa-map-marker" aria-hidden="true"></i>
+					<select name="cidade" id="cidade" disabled>
+						<option value="">Cidade</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php /*
+<section class="box-content">
 	<span id="continue_sonhando" class="link_page_ancora"></span>
 	<div class="container">
 
@@ -161,6 +262,7 @@
 
 	</div>
 </section>
+*/ ?>
 
 <?php get_footer(); ?>
 
