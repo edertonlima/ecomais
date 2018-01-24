@@ -25,22 +25,22 @@ h1 {
 }
 
 h2 {
-	line-height: 130px;
+	line-height: 90px;
 	text-transform: uppercase;
 	margin-top: 127px;
 	border-bottom: 4px solid $verde-limao;
 
 	span {
-		font-weight: $bold;
+		font-weight: $regular;
 		color: #000000;
-		font-size: 3rem;
-		top: 8px;
+		font-size: 2.75rem;
+		top: 3px;
 		position: relative;
 	}
 
 	img {
 		display: inline-block;
-		margin-right: 20px;
+		margin-right: 15px;
 		height: 72px;
 		top: 20px;
 		position: relative;
@@ -105,14 +105,25 @@ p {
 	}
 }
 
+.margin-top-30 {
+	margin-top: 30px;
+}
+
 .justify-center {
 	text-align: justify;  
 	/*-moz-text-align-last: center;
 	text-align-last: center;*/
 }
 
+.justify-left {
+	text-align: justify;  
+	-moz-text-align-last: left;
+	text-align-last: left;
+}
+
 .justify {
 	text-align: justify;  
+	text-justify: inter-word;
 }
 
 .center {

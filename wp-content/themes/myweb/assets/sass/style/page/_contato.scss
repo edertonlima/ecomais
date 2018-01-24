@@ -3,11 +3,12 @@ iframe {
 	height: 40vh;
 }
 
-.contato, .endereco {
+.contato {
 	padding-left: 200px;
 }
 
 .endereco {
+	padding: 40px 0;
 	i, span {
 		float: left;
 	}

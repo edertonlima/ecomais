@@ -3,6 +3,12 @@
 		margin: 2.5px 0;
 	}
 
+	&.list-tipo2 {
+		li {
+			margin-bottom: 2.5px;
+		}
+	}
+
 	a {
 		background-position: center;
 		background-size: cover;
@@ -31,15 +37,15 @@
 				margin: 0 auto 10px;
 			}
 
-			span, p {
-				width: 80%;
-				max-width: 260px;
-				color: #ffffff;
-				text-align: center;
+			img {
+				max-height: 100px;
 			}
 
-			img {
-				
+			span, p {
+				width: 70%;
+				//max-width: 260px;
+				color: #ffffff;
+				text-align: center;
 			}
 
 			span {
@@ -72,5 +78,83 @@
 				}
 			}
 		}
+	}
+}
+
+.itens_combinacoes {
+	li {
+		display: block;
+		border-bottom: 3px solid $verde-limao;
+		padding-bottom: 15px;
+		margin-bottom: 40px;
+		width: 100%;
+
+		&:last-child {
+			border: none;
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+		}
+
+		.itens {
+			display: inline-block;
+			vertical-align: top;
+			width: 18%;
+			min-height: 200px;
+			@include box-sizing;
+
+			span {
+				font-size: 1.5rem;
+				text-align: center;
+				display: block;
+				line-height: 1.75rem;
+				font-weight: $regular;
+				color: #000;
+			}
+
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+
+		.mais {
+			width: 3%;
+
+			img {
+				margin-top: 50px;
+			}
+		}
+
+		.box-combinacoes {
+			padding: 20px;
+			width: 59%;
+			background-color: #F1F1F2;
+
+			span {
+				color: $verde-limao;
+				text-transform: uppercase;
+				display: block;
+				text-align: left;
+				font-weight: $regular;
+			}
+
+			p {
+				margin-top: 10px;
+				font-size: 1rem;
+				line-height: 1.225rem;
+			}
+		}
+	}
+}
+
+.ico-page {
+	width: 100%;
+	display: block;
+	margin: 0px 0 50px;
+	text-align: center;
+
+	img {
+		display: inline-block;
+		margin: 0 30px;
 	}
 }

@@ -5,7 +5,7 @@
 	ul {
 		display: block;
 		margin: 0 auto;
-		width: 665px;
+		width: 760px;
 		text-align: center;
 		position: relative;
 		z-index: 999;
@@ -99,21 +99,25 @@
 
 /* menu mobile */
 .menu-mobile {
-	float: left;
-	width: 52px;
-	height: 52px;
-	margin-top: 10px;
-	text-decoration: none;
+	color: #ffffff;
+	display: none;
 	z-index: 9999;
-	position: relative;
-	background: url('../images/menu_off.png') no-repeat center;
+	position: absolute;
+	cursor: pointer;
+	font-size: 2.5rem;
+	top: 28px;
+	right: 50px;
 	@include animacao;
 
 	&.active {
-		background-image: url('../images/menu_on.png');
+		color: $verde-limao;
+
+		&:hover {
+			color: #ffffff;
+		}
 	}
 
 	&:hover {
-		opacity: .5;
+		color: $verde-limao;
 	}
 }

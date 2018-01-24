@@ -103,11 +103,11 @@
 
 		jQuery('.menu-mobile').click(function(){
 			if(jQuery(this).hasClass('active')){
-				jQuery('.nav').css('top','-100vh');
+				//jQuery('.nav').css('top','-100vh');
 				jQuery(this).removeClass('active');
 				jQuery('.header').removeClass('active');
 			}else{
-				jQuery('.nav').css('top','0px');
+				//jQuery('.nav').css('top','0px');
 				jQuery(this).addClass('active');
 				jQuery('.header').addClass('active');
 			}
@@ -128,7 +128,7 @@
 	jQuery(window).resize(function(){
 		jQuery('.menu-mobile').removeClass('active');
 		jQuery('.header').removeClass('active');
-		jQuery('.nav').css('top','-100vh');
+		//jQuery('.nav').css('top','-100vh');
 		if(jQuery('body').height() <= jQuery(window).height()){
 			jQuery('.footer').css({position: 'absolute', bottom: '0px'});
 		}else{
@@ -166,11 +166,11 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 	<header class="header">
 
-			<a href="javascript:" class="menu-mobile"></a>
+			<i class="fa fa-bars menu-mobile" aria-hidden="true"></i>
 
 			<nav class="nav">
 				<ul class="menu-principal">
-					<li class="<?php if(is_page('producao')){ echo 'active'; } ?>">
+					<li class="<?php if((is_page('producao')) or (is_post_type_archive('produtos')) or (is_tax('produtos_taxonomy')) or (is_singular('produtos'))){ echo 'active'; } ?>">
 						<a href="javascript:" title="PRODUTOS">
 							PRODUTOS
 						</a>
@@ -182,8 +182,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 								</a>
 							</li>
 
-							<li class="submenu">
-								<a href="javascript:" title="">
+							<li class="submenu <?php if((is_post_type_archive('produtos')) or (is_tax('produtos_taxonomy')) or (is_singular('produtos'))){ echo 'active'; } ?>">
+								<a href="<?php echo get_home_url(); ?>/produtos" title="">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-nossos-produtos.png" class="">
 									NOSSOS PRODUTOS
 								</a>
@@ -205,7 +205,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 						</h1>
 					</li>
 
-					<li class="<?php if(is_page(array( 'dicas/cortes-de-carnes', 'dicas/toque-do-chef', 'dicas/toque-do-chef/tempero-da-carne', 'dicas/toque-do-chef/carne-x-carne', 'dicas/toque-do-chef/distancia-do-briquete', 'dicas/toque-do-chef/carne-de-primeira' ))){ echo 'active'; } ?>">
+					<li class="<?php if((is_page(array( 'dicas/cortes-de-carnes', 'dicas/toque-do-chef', 'dicas/toque-do-chef/tempero-da-carne', 'dicas/toque-do-chef/carne-x-carne', 'dicas/toque-do-chef/distancia-do-briquete', 'dicas/toque-do-chef/carne-de-primeira', 'dicas/harmonizacoes', 'dicas/harmonizacoes/cervejas', 'dicas/harmonizacoes/vinhos', 'dicas/harmonizacoes/caipirinhas', 'dicas/churrascometro' ))) or (is_post_type_archive('musicas')) or (is_singular('musicas'))){ echo 'active'; } ?>">
 						<a href="javascript:" title="DICAS">
 							DICAS
 						</a>
@@ -224,17 +224,24 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 								</a>
 							</li>
 
-							<li class="submenu">
-								<a href="javascript:" title="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-harmonizações.png" class="">
-									HARMONIZAÇÕES
+							<li class="submenu <?php if(is_page(array( 'dicas/harmonizacoes', 'dicas/harmonizacoes/cervejas', 'dicas/harmonizacoes/vinhos', 'dicas/harmonizacoes/caipirinhas' ))){ echo 'active'; } ?>">
+								<a href="<?php echo get_permalink(get_page_by_path('dicas/harmonizacoes')); ?>" title="<?php echo get_the_title(get_page_by_path('dicas/harmonizacoes')); ?>">
+									<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/harmonizacoes')); ?>">
+									<?php echo get_the_title(get_page_by_path('dicas/harmonizacoes')); ?>
 								</a>
 							</li>
 
-							<li class="submenu">
-								<a href="javascript:" title="">
+							<li class="submenu <?php if((is_post_type_archive('musicas')) or is_singular('musicas')){ echo 'active'; } ?>">
+								<a href="<?php echo get_home_url(); ?>/musicas" title="">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-musicas.png" class="">
 									MÚSICAS
+								</a>
+							</li>
+
+							<li class="submenu <?php if(is_page('churrascometro')){ echo 'active'; } ?>">
+								<a href="<?php echo get_home_url(); ?>/churrascometro" title="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-musicas.png" class="">
+									churrascometro
 								</a>
 							</li>
 						</ul>

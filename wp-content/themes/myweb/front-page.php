@@ -10,27 +10,38 @@
 				<?php if( have_rows('slide') ):
 					$slide = 0;
 					while ( have_rows('slide') ) : the_row();
+						$slide = $slide+1;
 
-						if(get_sub_field('imagem')){
-							$slide = $slide+1; ?>
+						if(get_sub_field('video')){ ?>
 
-							<div class="item <?php if($slide == 1){ echo 'active'; } ?>" style="background-image: url('<?php the_sub_field('imagem'); ?>');">
-
-								<div class="box-height">
-									<div class="box-texto">
-										
-										<p class="texto"><?php the_sub_field('texto'); ?></p>
-										<?php if(get_sub_field('sub_texto')){ ?>
-											<p class="sub-texto"><?php the_sub_field('sub_texto'); ?></p>
-										<?php } ?>
-
-									</div>
-								</div>
-								
+							<div class="item video <?php if($slide == 1){ echo 'active'; } ?>">
+								<video autoplay="true" loop="true" muted="true">
+									<source src="<?php the_sub_field('video'); ?>" type="video/mp4">
+								</video>
 							</div>
 
-						<?php }
+						<?php }else{
 
+							if(get_sub_field('imagem')){ ?>
+
+								<div class="item <?php if($slide == 1){ echo 'active'; } ?>" style="background-image: url('<?php the_sub_field('imagem'); ?>');">
+
+									<div class="box-height">
+										<div class="box-texto">
+											
+											<p class="texto"><?php the_sub_field('texto'); ?></p>
+											<?php if(get_sub_field('sub_texto')){ ?>
+												<p class="sub-texto"><?php the_sub_field('sub_texto'); ?></p>
+											<?php } ?>
+
+										</div>
+									</div>
+									
+								</div>
+
+							<?php }
+
+						}
 					endwhile;
 				endif; ?>
 
@@ -113,6 +124,7 @@
 	</div>
 </section>
 
+<?php /*
 <section class="box-content no-padding onde-comprar" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/mapa.png');">
 	<div class="box-comprar">
 		<span class="tit">ONDE COMPRAR?</span>
@@ -135,7 +147,7 @@
 							foreach (array_unique($estados) as $estado) { ?>
 								<option value="<?php echo $estado; ?>"><?php echo $estado; ?></option>
 							<?php } */
-						?>									
+						/*?>									
 
 					</select>
 				</div>
@@ -151,123 +163,165 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> */ ?>
 
-<?php /*
-<section class="box-content">
-	<span id="continue_sonhando" class="link_page_ancora"></span>
-	<div class="container">
 
-		<p class="sub-tituto borda-efeito">Nós tiramos do papel sua ideia e concretizamos seus sonhos</p>
+	<?php
+		query_posts(
+			array(
+				'post_type' => 'representantes',
+				'posts_per_page' => -1
+			)
+		);
+		while ( have_posts() ) : the_post();
 
-		<?php if( have_rows('ico_page_superior') ): ?>
-			<ul class="ico-page">
-				<?php while ( have_rows('ico_page_superior') ) : the_row(); ?>
+			$terms = wp_get_post_terms( $post->ID, $post->post_type.'_taxonomy' );
 
-					<li>
-						<img src="<?php the_sub_field('icone'); ?>" class="" alt="<?php the_sub_field('titulo'); ?>"/>
-						<span><?php the_sub_field('titulo'); ?></span>
-					</li>
+			$tipos[] = strtolower($terms[0]->name);
 
-				<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>	
-
-		<?php
-			$prod_list = get_posts(
-				array(
-					'posts_per_page' => 5,
-					'post_type' => 'projetos'
-				)
+			$representantes[strtolower($terms[0]->name)][] = array(
+				'categoria' => $terms[0]->name,
+				'ID' => $post->ID,
+				'nome' => $post->post_title,
+				'estado' => get_field('estado_representantes',$post->ID),
+				'uf' => strtolower(get_field('uf_representantes',$post->ID)),
+				'cidade' => get_field('cidade_representantes',$post->ID),
+				'email' => get_field('e-mail_representantes',$post->ID),
+				'telefone' => get_field('telefone_representantes',$post->ID),
+				'celular' => get_field('celular_representantes',$post->ID),
+				'endereco' => get_field('endereco_representantes',$post->ID),
+				'numero' => get_field('numero_representantes',$post->ID),
+				'bairro' => get_field('bairro_representantes',$post->ID)
 			);
 
-			if(count($prod_list) > 0){ ?>
-				<div class="grid">
-					<div class="grid-sizer"></div>
+		endwhile;
+		wp_reset_query();
+		//var_dump($representantes);
+		$tipos = array_unique($tipos);
+		//var_dump($representantes);
+	?>
 
-					<?php foreach ( $prod_list as $produto ) { $terms = wp_get_post_terms( $produto->ID, 'categoria_projeto' ); ?>
+	<section class="box-content representantes">
 
-						<div class="grid-item">
-							<div class="">
-								<a href="<?php the_permalink($produto->ID); ?>" title="<?php echo $produto->post_title; ?>">
-									<article class="item">
+			<div class="tit-page-child">
+				<div class="container">
+					<span class="center">ONDE COMPRAR?</span>
+				</div>
+			</div>
 
-										<img src="<?php the_field('imagem_listagem', $produto->ID); ?>" class="img-grid" alt="<?php echo $produto->post_title; ?>"/>
+			<p class="center margin-top-30">Selecione seu estado para encontrar o representante mais próximo:</p>
 
-										<div class="hover-grid">
-											<div class="cont-hover">
-												<img src="<?php the_field('ico_listagem',$terms[0]->taxonomy.'_'.$terms[0]->term_id); ?>" class="" alt=""/>
-												<span><?php echo $produto->post_title; ?></span>
-												<?php echo $terms[0]->name; ?>
-											</div>
-										</div>
-									</article>
-								</a>
+		<div class="container">
+
+			<div class="row">
+				<div class="col-12">
+
+					<div class="select-comprar">
+
+						<div class="col-4">
+							<div class="select">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+
+								<select name="tipo" id="tipo">									
+									<?php
+										$args = array(
+										    'taxonomy'      => 'representantes_taxonomy',
+										    'parent'        => 0,
+										    'orderby'       => 'name',
+										    'order'         => 'ASC',
+										    'hierarchical'  => 1,
+										    'pad_counts'    => 0
+										);
+										$categories = get_categories( $args );
+										$qtd_cat = 1;
+										foreach ( $categories as $categoria ){ ?>
+
+											<option value="<?php echo strtolower($categoria->name); ?>" <?php if($qtd_cat == 1){ echo 'selected="selected"'; } ?>><?php echo $categoria->name; ?></option>
+											
+										<?php
+											$qtd_cat = $qtd_cat+1;
+										}
+									?>
+								</select>
+
+								<?php /*<select name="estado" id="estado">
+									<option value="Lojas">Lojas</option>				
+									<option value="Representantes">Representantes</option>
+
+
+								</select> */ ?>
 							</div>
 						</div>
 
-					<?php } ?>
+						<div class="col-4 select-estado">
+							<div class="select">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+								<select name="estado" id="estado">
+								</select>
+							</div>
+						</div>
 
+						<div class="col-4">
+							<div class="select">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+								<select name="cidade" id="cidade" disabled>
+									<option value="">Selecione uma Cidade</option>
+								</select>
+							</div>
+						</div>
+					</div>
+ 
+					<ul class="map on-lojas" style="">
+						<?php 
+							foreach ($representantes['lojas'] as $key => $value) { 
+								$lojas_estados[$value['uf']] = array(
+									'uf' => $value['uf'],
+									'nome' => $value['estado']
+								); ?>
+
+								<li class="<?php echo $value['uf']; ?>" estado="<?php echo $value['uf']; ?>">
+									<a href="javascript:" rel="<?php echo $value['uf']; ?>" class="<?php echo $value['uf']; ?> on" title="<?php echo strtoupper($value['uf']); ?>">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/null.gif" alt="<?php echo strtoupper($value['uf']); ?>" />
+									</a>
+								</li>
+							<?php }
+						?>
+					</ul>
+
+					<ul class="map on-representantes" style="display: none;">
+						<?php 
+							foreach ($representantes['representantes'] as $key => $value) { 
+								$repre_estados[$value['uf']] = array(
+									'uf' => $value['uf'],
+									'nome' => $value['estado']
+								); ?>
+
+								<li class="<?php echo $value['uf']; ?>" estado="<?php echo $value['uf']; ?>">
+									<a href="javascript:" rel="<?php echo $value['uf']; ?>" class="<?php echo $value['uf']; ?> on" title="<?php echo strtoupper($value['uf']); ?>">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/null.gif" alt="<?php echo strtoupper($value['uf']); ?>" />
+									</a>
+								</li>
+							<?php }
+						?>
+					</ul>
+
+					<div class="col-12">
+						<ul class="list-representantes"></ul>
+					</div>
+					
 				</div>
-			<?php }
-		?>		
-
-		<p class="sub-tituto borda-efeito">Trabalhamos para transformar ideias em serviços e produtos referências em seu segmento.</p>
-		
-		<?php if( have_rows('ico_page_inferior') ): ?>
-			<ul class="ico-page ico-page-inferior">
-				<?php while ( have_rows('ico_page_inferior') ) : the_row(); ?>
-
-					<li>
-						<img src="<?php the_sub_field('icone'); ?>" class="" alt="<?php the_sub_field('titulo'); ?>"/>
-						<span><?php the_sub_field('titulo'); ?></span>
-					</li>
-
-				<?php endwhile; ?>
-			</ul>
-		<?php endif; ?>	
-	
-	</div>
-</section>
-
-<section class="box-content box-msg" style="background-image: url('<?php the_field('imagem_destaque'); ?>');">
-	<div class="box-height">
-		<div class="box-texto">
-			
-			<p class="texto"><?php the_field('texto_destaque'); ?></p>
-			<?php if(get_field('sub_texto_destaque')){ ?>
-				<p class="sub-texto"><?php the_field('sub_texto_destaque'); ?></p>
-			<?php } ?>
+			</div>
 
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="box-content box-sobre sombra">
-	<div class="container">
-		
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_cafe.png" class="ico_cafe" alt=""/>
-		<p class="sub-tituto borda-efeito">Trabalhamos para transformar ideias em serviços e produtos referências em seu segmento.</p>
-		<a href="#" class="button" title="Quero Agendar">Quero Agendar</a>
 
-		<p class="sub-tituto sub-titulo-icone borda-efeito">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico_news.png" class="" alt=""/>
-			Newsletter
-		</p>
 
-		<form class="news" action="javascript:">
-			<input type="text" name="email_news" placeholder="Escreva seu email aqui...">
-			<button class="news"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/button_news.png" class="" alt=""/></button>
-		</form>
-
-	</div>
-</section>
-*/ ?>
 
 <?php get_footer(); ?>
 
 <script type="text/javascript">
-	jQuery(document).ready(function(){	    
+	jQuery(document).ready(function(){	  
 
 		// FORM
 		jQuery(".enviar").click(function(){
@@ -301,7 +355,7 @@
 		});
 		
 	});
-
+/*
 	jQuery(window).load(function(){
 		jQuery('.grid-item').each(function(){
 			jQuery('.hover-grid',this).height(jQuery(this).height());
@@ -312,9 +366,9 @@
 		jQuery('.grid-item').each(function(){
 			jQuery('.hover-grid',this).height(jQuery(this).height());
 		});
-	});
+	});*/
 </script>
-
+<?php /*
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/masonry.pkgd.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/imagesloaded.pkgd.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -327,4 +381,395 @@
 	$grid.imagesLoaded().progress( function() {
 		$grid.masonry();
 	});  
+</script>*/ ?>
+
+<script type="text/javascript">
+	<?php 
+		foreach ($tipos as $value) {
+			echo 'var '.$value.' = '. json_encode($representantes[$value]).';';
+		}
+
+		echo 'var repre_estados = '. json_encode($repre_estados).';';
+		echo 'var lojas_estados = '. json_encode($lojas_estados).';';
+	?>
+
+	jQuery('form.login').submit(function(event){
+
+		jQuery('.enviar').html('Enviando').prop( "disabled", true );
+		jQuery('.msg-form').removeClass('erro ok').html('');
+
+		var usuario = jQuery('#usuario').val();
+		var senha = jQuery('#senha').val();		
+
+		var enviar = true;
+
+		if(usuario == ''){
+			jQuery('#usuario').parent().addClass('erro');
+			enviar = false;
+		}
+
+		if(senha == ''){
+			jQuery('#senha').parent().addClass('erro');
+			enviar = false;
+		}
+
+		if(!enviar){
+			jQuery('.msg-form').html('Todos os campos são obrigatórios.');
+			jQuery('.enviar').html('Entrar').prop( "disabled", false );
+			return false;
+		}else{
+			jQuery('.enviar').html('Enviar').prop( "disabled", false );
+			//event.preventDefault();
+		}		
+		
+	});
+
+	/*jQuery(".enviar").click(function(){
+
+	});*/
+
+	var val_estado_map = '';
+	var val_estado = '';
+	var list_representantes = '';
+	var val_tipo = '';
+	
+	function monta_estados(tipo){
+		var estados = new Array();
+		if(tipo == 'representantes'){
+			jQuery.each(repre_estados, function (key, val) {
+				estados.push({'nome':val.nome, 'uf':val.uf});
+			});
+		}
+		if(tipo == 'lojas'){
+			jQuery.each(lojas_estados, function (key, val) {
+				estados.push({'nome':val.nome, 'uf':val.uf});
+			});
+		}
+		estados = estados.filter(function(elem, pos, self) {
+			return self.indexOf(elem) == pos;
+		});
+
+		estado = '<option value="Selecione um Estado">Selecione um Estado</option>';
+		jQuery.each(estados, function (key, val) {
+			estado += '<option value="' + val.uf + '">' + val.nome + '</option>';
+		});
+		jQuery("#estado").html(estado);
+	}
+
+	jQuery(document).ready(function(){
+
+		monta_estados(jQuery('#tipo option:selected').val());
+
+		jQuery("#tipo").change(function(){
+			
+			jQuery('#cidade').html('<option value="Selecione uma Cidade">Selecione uma Cidade</option>').prop('disabled', true);
+			//jQuery("#estado").val('Selecione um Estado').change();
+			jQuery('.list-representantes').html('');
+
+			monta_estados(jQuery(this).val());
+
+			jQuery(".map li a").removeClass('active');
+			jQuery(".map").hide();
+			jQuery('.on-'+jQuery(this).val()).show();
+		}).change();
+
+		jQuery("#estado").change(function(){
+			jQuery(".map li a").removeClass('active');
+			var cidade = '<option value="Selecione uma Cidade">Selecione uma Cidade</option>';
+			var cidades = [];
+			val_estado = jQuery('#estado option:selected').val();			
+			val_tipo = jQuery('#tipo option:selected').val();
+
+			if(val_estado != val_estado_map){
+				if(val_estado != 'Selecione um Estado'){
+
+					// MONTA SELECT CIDADES
+					if(val_tipo == 'lojas'){
+						jQuery.each(lojas, function (key, val) {
+							if((val.uf == val_estado) && (val_tipo == val.categoria.toLowerCase())) {
+								cidades.push(val.cidade);
+							}
+						});
+					}
+					if(val_tipo == 'representantes'){
+						jQuery.each(representantes, function (key, val) {
+							if((val.uf == val_estado) && (val_tipo == val.categoria.toLowerCase())) {
+								cidades.push(val.cidade);
+							}
+						});
+					}
+					cidades = cidades.filter(function(elem, pos, self) {
+						return self.indexOf(elem) == pos;
+					});
+					jQuery.each(cidades, function (key, val) {
+						cidade += '<option value="' + val + '">' + val + '</option>';
+					});
+					jQuery("#cidade").html(cidade).prop('disabled', false);
+					// MONTA SELECT CIDADES
+
+					jQuery('.list-representantes').html('');
+					jQuery('.map li a').removeClass('active');
+					jQuery('.map li a.'+val_estado).addClass('active');
+					list_representantes = '';
+					
+					if(val_tipo == 'representantes'){
+						jQuery.each(representantes, function (key, val) {
+							if((val.uf == val_estado) && (val.categoria.toLowerCase() == val_tipo)) {
+								list_representantes += '<li>';
+								list_representantes += '<h3>'+val.nome+'</h3><div class="content-txt">';
+
+								if(val.email != ''){
+									list_representantes += '<span class="email"><strong>E-mail</strong>'+val.email+'</span>'
+								}
+
+								if(val.telefone != ''){
+									list_representantes += '<span><strong>Telefone</strong>'+val.telefone+'</span>'
+								}
+
+								if(val.celular != ''){
+									list_representantes += '<span><strong>Celular</strong>'+val.celular+'</span>'
+								}
+
+								if(val.endereco != ''){
+									list_representantes += '<span><strong>Endereço</strong>'+val.endereco+', '+val.numero+', '+val.bairro+'</span>'
+								}
+
+								if(val.cidade != ''){
+									list_representantes += '<span><strong>Cidade</strong>'+val.cidade+', '+val.estado+'</span>'
+								}
+
+								list_representantes += '</div></li>';
+							}
+						});
+					}
+
+					if(val_tipo == 'lojas'){
+						jQuery.each(lojas, function (key, val) {
+							if((val.uf == val_estado) && (val.categoria.toLowerCase() == val_tipo)) {
+								list_representantes += '<li>';
+								list_representantes += '<h3>'+val.nome+'</h3><div class="content-txt">';
+
+								if(val.email != ''){
+									list_representantes += '<span class="email"><strong>E-mail</strong>'+val.email+'</span>'
+								}
+
+								if(val.telefone != ''){
+									list_representantes += '<span><strong>Telefone</strong>'+val.telefone+'</span>'
+								}
+
+								if(val.celular != ''){
+									list_representantes += '<span><strong>Celular</strong>'+val.celular+'</span>'
+								}
+
+								if(val.endereco != ''){
+									list_representantes += '<span><strong>Endereço</strong>'+val.endereco+', '+val.numero+', '+val.bairro+'</span>'
+								}
+
+								if(val.cidade != ''){
+									list_representantes += '<span><strong>Cidade</strong>'+val.cidade+', '+val.estado+'</span>'
+								}
+
+								list_representantes += '</div></li>';
+							}
+						});
+					}
+				}
+				jQuery('.list-representantes').html(list_representantes);
+			}
+		}).change();
+
+		jQuery("#cidade").change(function(){
+			val_cidade = jQuery('#cidade option:selected').val();
+			val_estado = jQuery('#estado option:selected').val();
+			val_tipo = jQuery('#tipo option:selected').val();
+			list_representantes = '';
+			
+			if(val_tipo == 'representantes'){
+				if(val_cidade != 'Selecione uma Cidade'){
+					jQuery.each(representantes, function (key, val) {
+						if((val.uf == val_estado) && (val.cidade == val_cidade) && (val.categoria.toLowerCase() == val_tipo)) {
+							list_representantes += '<li>';
+							list_representantes += '<h3>'+val.nome+'</h3><div class="content-txt">';
+
+							if(val.email != ''){
+								list_representantes += '<span class="email"><strong>E-mail</strong>'+val.email+'</span>'
+							}
+
+							if(val.telefone != ''){
+								list_representantes += '<span><strong>Telefone</strong>'+val.telefone+'</span>'
+							}
+
+							if(val.celular != ''){
+								list_representantes += '<span><strong>Celular</strong>'+val.celular+'</span>'
+							}
+
+							if(val.endereco != ''){
+								list_representantes += '<span><strong>Endereço</strong>'+val.endereco+', '+val.numero+', '+val.bairro+'</span>'
+							}
+
+							if(val.cidade != ''){
+								list_representantes += '<span><strong>Cidade</strong>'+val.cidade+', '+val.estado+'</span>'
+							}
+
+							list_representantes += '</div></li>';
+						}
+					});
+				}
+			}
+
+			if(val_tipo == 'lojas'){
+				if(val_cidade != 'Selecione uma Cidade'){
+					jQuery.each(lojas, function (key, val) {
+						if((val.uf == val_estado) && (val.cidade == val_cidade) && (val.categoria.toLowerCase() == val_tipo)) {
+							list_representantes += '<li>';
+							list_representantes += '<h3>'+val.nome+'</h3><div class="content-txt">';
+
+							if(val.email != ''){
+								list_representantes += '<span class="email"><strong>E-mail</strong>'+val.email+'</span>'
+							}
+
+							if(val.telefone != ''){
+								list_representantes += '<span><strong>Telefone</strong>'+val.telefone+'</span>'
+							}
+
+							if(val.celular != ''){
+								list_representantes += '<span><strong>Celular</strong>'+val.celular+'</span>'
+							}
+
+							if(val.endereco != ''){
+								list_representantes += '<span><strong>Endereço</strong>'+val.endereco+', '+val.numero+', '+val.bairro+'</span>'
+							}
+
+							if(val.cidade != ''){
+								list_representantes += '<span><strong>Cidade</strong>'+val.cidade+', '+val.estado+'</span>'
+							}
+
+							list_representantes += '</div></li>';
+						}
+					});
+				}
+			}
+
+			jQuery('.list-representantes').html(list_representantes);
+		}).change();
+		
+
+		jQuery(".map li a").click(function(){
+			jQuery('.list-representantes').html('');
+
+			var cidade = '<option value="Selecione uma Cidade">Selecione uma Cidade</option>';
+			var cidades = [];
+
+			val_estado_map = jQuery(this).attr('rel');
+			val_tipo = jQuery('#tipo option:selected').val();
+			list_representantes = '';
+
+			if(val_estado != val_estado_map){
+				if(val_estado_map != ''){
+
+					// MONTA SELECT CIDADES
+					if(val_tipo == 'lojas'){
+						jQuery.each(lojas, function (key, val) {
+							if((val.uf == val_estado_map) && (val_tipo == val.categoria.toLowerCase())) {
+								cidades.push(val.cidade);
+							}
+						});
+					}
+					if(val_tipo == 'representantes'){
+						jQuery.each(representantes, function (key, val) {
+							if((val.uf == val_estado_map) && (val_tipo == val.categoria.toLowerCase())) {
+								cidades.push(val.cidade);
+							}
+						});
+					}
+					cidades = cidades.filter(function(elem, pos, self) {
+						return self.indexOf(elem) == pos;
+					});
+					jQuery.each(cidades, function (key, val) {
+						cidade += '<option value="' + val + '">' + val + '</option>';
+					});
+					jQuery("#cidade").html(cidade).prop('disabled', false);
+					// MONTA SELECT CIDADES
+
+					jQuery("#estado").val(val_estado_map).change();
+
+					list_representantes = '';
+					if(val_tipo == 'representantes'){
+						jQuery.each(representantes, function (key, val) {
+							if((val.uf == val_estado) && (val.categoria.toLowerCase() == val_tipo)) {
+								list_representantes += '<li>';
+								list_representantes += '<h3>'+val.nome+'</h3><div class="content-txt">';
+
+								if(val.email != ''){
+									list_representantes += '<span class="email"><strong>E-mail</strong>'+val.email+'</span>'
+								}
+
+								if(val.telefone != ''){
+									list_representantes += '<span><strong>Telefone</strong>'+val.telefone+'</span>'
+								}
+
+								if(val.celular != ''){
+									list_representantes += '<span><strong>Celular</strong>'+val.celular+'</span>'
+								}
+
+								if(val.endereco != ''){
+									list_representantes += '<span><strong>Endereço</strong>'+val.endereco+', '+val.numero+', '+val.bairro+'</span>'
+								}
+
+								if(val.cidade != ''){
+									list_representantes += '<span><strong>Cidade</strong>'+val.cidade+', '+val.estado+'</span>'
+								}
+
+								list_representantes += '</div></li>';
+							}
+						});
+					}
+
+					if(val_tipo == 'lojas'){
+						jQuery.each(lojas, function (key, val) {
+							if((val.uf == val_estado) && (val.categoria.toLowerCase() == val_tipo)) {
+								list_representantes += '<li>';
+								list_representantes += '<h3>'+val.nome+'</h3><div class="content-txt">';
+
+								if(val.email != ''){
+									list_representantes += '<span class="email"><strong>E-mail</strong>'+val.email+'</span>'
+								}
+
+								if(val.telefone != ''){
+									list_representantes += '<span><strong>Telefone</strong>'+val.telefone+'</span>'
+								}
+
+								if(val.celular != ''){
+									list_representantes += '<span><strong>Celular</strong>'+val.celular+'</span>'
+								}
+
+								if(val.endereco != ''){
+									list_representantes += '<span><strong>Endereço</strong>'+val.endereco+', '+val.numero+', '+val.bairro+'</span>'
+								}
+
+								if(val.cidade != ''){
+									list_representantes += '<span><strong>Cidade</strong>'+val.cidade+', '+val.estado+'</span>'
+								}
+
+								list_representantes += '</div></li>';
+							}
+						});
+					}
+				}
+				
+				jQuery('.list-representantes').html(list_representantes);
+			}
+
+			jQuery('.list-representantes').html(list_representantes);
+			jQuery('.map li a').removeClass('active');
+			jQuery('.map li a.'+val_estado_map).addClass('active');
+		});
+
+		jQuery('input').change(function(){
+			if(jQuery(this).parent().hasClass('erro')){
+				jQuery(this).parent().removeClass('erro');
+			}
+		});
+
+	})
 </script>

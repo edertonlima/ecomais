@@ -1,0 +1,306 @@
+.representantes {
+	.content-txt {
+		margin: 20px 0 0;
+	}
+
+	.list-representantes {
+		clear: both;
+		margin-top: 50px;
+		display: block;
+		
+		li {
+			width: 50%;
+			float: left;
+			padding: 0 20px;
+			margin-bottom: 50px;
+			@include box-sizing;
+
+			h3 {
+				margin: 0px;
+				font-size: 1.5rem;
+				border: navajowhite;
+				padding: 0;
+			}
+
+			.content-txt {
+				margin: 0;
+				padding: 0;
+
+				span {
+					margin-top: 10px;
+					margin-right: 25px;
+					display: inline-block;
+					font-size: 1rem;
+
+					&.email {
+						display: block;
+					}
+
+					strong {
+						color: $verde-limao;
+						display: block;
+						font-size: .6rem;
+						line-height: .6rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.active { display:inherit; }
+ul.map { clear: both; display: block; margin: 0px auto; padding: 0; width: 570px; height: 585px; background-image: url('../images/map.gif');}
+ul.map li {display: block; padding: 0; position: absolute;}
+li.rs {margin-top: 485px; margin-left: 237px; }
+li.sc {margin-top: 467px; margin-left: 292px;}
+li.pr {margin-top: 416px; margin-left: 281px;}
+li.sp {margin-top: 375px; margin-left: 303px; z-index:9999; }
+li.ms {margin-top: 336px; margin-left: 229px;}
+li.rj {margin-top: 390px; margin-left: 422px; z-index:9999; }
+li.es {margin-top: 347px; margin-left: 467px; z-index:9999; }
+li.mg {margin-top: 292px; margin-left: 333px; z-index:9998; }
+li.go {margin-top: 264px; margin-left: 301px; z-index:9999; }
+li.df {margin-top: 311px; margin-left: 373px; z-index:9999; }
+li.ba {margin-top: 207px; margin-left: 397px;}
+li.mt {margin-top: 189px; margin-left: 180px;}
+li.ro {margin-top: 199px; margin-left: 104px; z-index:9998; }
+li.ac {margin-top: 185px; margin-left: 0px;}
+li.am {margin-top: 46px; margin-left: 3px;}
+li.rr {margin-top: 0; margin-left: 133px;}
+li.pa {margin-top: 40px; margin-left: 219px;}
+li.ap {margin-top: 13px; margin-left: 278px;}
+li.ma {margin-top: 94px; margin-left: 366px; z-index:9999;}
+li.to {margin-top: 156px; margin-left: 338px;}
+
+li.se {margin-top: 221px; margin-left: 519px; z-index:9998;}
+li.al {margin-top: 211px; margin-left: 518px; z-index:9999;}
+li.pe {margin-top: 188px; margin-left: 473px;}
+li.pb {margin-top: 169px; margin-left: 511px; z-index:9999;}
+li.rn {margin-top: 151px; margin-left: 514px;}
+li.ce {margin-top: 121px; margin-left: 473px;}
+li.pi {margin-top: 120px; margin-left: 406px; z-index:9997;}
+
+ul.map li a {display: block; text-decoration: none; position: absolute; @include animacao-off(); }
+a.rs {width: 116px; height: 101px; }
+a.sc {width: 81px; height: 53px; }
+a.pr {width: 97px; height: 64px; }
+a.sp {width: 131px; height: 84px; }
+a.ms {width: 106px; height: 104px; }
+a.rj {width: 58px; height: 40px; }
+a.es {width: 33px; height: 51px; }
+a.mg {width: 163px; height: 131px; }
+a.go {width: 108px; height: 108px; }
+a.df {width: 16px; height: 9px; }
+a.ba {width: 136px; height: 148px; }
+a.mt {width: 166px; height: 161px; }
+a.ro {width: 104px; height: 87px; }
+a.ac {width: 108px; height: 62px; }
+a.am {width: 258px; height: 181px;}
+a.rr {width: 87px; height: 103px; }
+a.pa {width: 188px; height: 187px; }
+a.ap {width: 73px; height: 85px; }
+a.ma {width: 102px; height: 139px; }
+a.to {width: 74px; height: 125px; }
+a.se {width: 28px; height: 32px; }
+a.al {width: 46px; height: 27px; }
+a.pe {width: 97px; height: 34px; }
+a.pb {width: 59px; height: 35px; }
+a.rn {width: 53px; height: 33px; }
+a.ce {width: 61px; height: 76px; }
+a.pi {width: 83px; height: 124px; }
+
+/* Código pronto via http://css.spritegen.com (com alterações nos seletores) */
+
+a.pa:hover, a.pa, a.am:hover, a.am, a.mt:hover, a.mt, a.ba:hover, a.ba, a.ma:hover, a.ma,
+a.mg:hover, a.mg, a.to:hover, a.to, a.pi:hover, a.pi, a.go:hover, a.go, a.ms:hover, a.ms,
+a.rr:hover, a.rr, a.rs:hover, a.rs, a.ro:hover, a.ro, a.ap:hover, a.ap, a.sp:hover, a.sp,
+a.ce:hover, a.ce, a.pr:hover, a.pr, a.ac:hover, a.ac, a.sc:hover, a.sc, a.es:hover, a.es,
+a.rj:hover, a.rj, a.pb:hover, a.pb, a.pe:hover, a.pe, a.rn:hover, a.rn, a.se:hover, a.se,
+a.al:hover, a.al, a.df:hover, a.df
+{ 
+	display: block;
+	background-repeat: no-repeat;
+
+	&.on {
+		background-image: url('../images/sprite.png');
+	}
+
+	&.active, &:hover {
+		background-image: url('../images/sprite.gif');
+	}
+}
+
+a.pa:hover, a.pa { background-position: -10px -0px; width: 188px; height: 187px;
+	&.active {
+		background-position: -10px -0px;
+	}
+}
+a.am:hover, a.am { background-position: -10px -197px; width: 258px; height: 181px;
+	&.active {
+		background-position: -10px -197px;
+	}
+}
+a.mt:hover, a.mt { background-position: -10px -388px; width: 166px; height: 161px;
+	&.active {
+		background-position: -10px -388px;
+	}
+}
+a.ba:hover, a.ba { background-position: -10px -559px; width: 136px; height: 148px;
+	&.active {
+		background-position: -10px -559px;
+	}
+}
+a.ma:hover, a.ma { background-position: -156px -559px; width: 102px; height: 139px;
+	&.active {
+		background-position: -156px -559px;
+	}
+}
+a.mg:hover, a.mg { background-position: -10px -717px; width: 163px; height: 131px;
+	&.active {
+		background-position: -10px -717px;
+	}
+}
+a.to:hover, a.to { background-position: -183px -717px; width: 74px; height: 125px;
+	&.active {
+		background-position: -183px -717px;
+	}
+}
+a.pi:hover, a.pi { background-position: -10px -858px; width: 83px; height: 124px;
+	&.active {
+		background-position: -10px -858px;
+	}
+}
+a.go:hover, a.go { background-position: -103px -858px; width: 108px; height: 108px;
+	&.active {
+		background-position: -103px -858px;
+	}
+}
+a.ms:hover, a.ms { background-position: -103px -976px; width: 106px; height: 104px;
+	&.active {
+		background-position: -103px -976px;
+	}
+}
+a.rr:hover, a.rr { background-position: -10px -992px; width: 87px; height: 103px;
+	&.active {
+		background-position: -10px -992px;
+	}
+}
+a.rs:hover, a.rs { background-position: -107px -1090px; width: 116px; height: 101px;
+	&.active {
+		background-position: -107px -1090px;
+	}
+}
+a.ro:hover, a.ro { background-position: -10px -1201px; width: 104px; height: 87px;
+	&.active {
+		background-position: -10px -1201px;
+	}
+}
+a.ap:hover, a.ap { background-position: -10px -1105px; width: 73px; height: 85px;
+	&.active {
+		background-position: -10px -1105px;
+	}
+}
+a.sp, a.sp:hover, a.sp { background-position: -124px -1201px; width: 131px; height: 84px;
+	&.active {
+		background-position: -124px -1201px;
+	}
+}
+a.ce:hover, a.ce { background-position: -186px -388px; width: 61px; height: 76px;
+	&.active {
+		background-position: -186px -388px;
+	}
+}
+a.pr:hover, a.pr { background-position: -124px -1295px; width: 97px; height: 64px;
+	&.active {
+		background-position: -124px -1295px;
+	}
+}
+a.ac:hover, a.ac { background-position: -10px -1298px; width: 108px; height: 62px;
+	&.active {
+		background-position: -10px -1298px;
+	}
+}
+a.sc:hover, a.sc { background-position: -128px -1369px; width: 81px; height: 53px;
+	&.active {
+		background-position: -128px -1369px;
+	}
+}
+a.es:hover, a.es { background-position: -208px -0px; width: 33px; height: 51px;
+	&.active {
+		background-position: -208px -0px;
+	}
+}
+a.rj:hover, a.rj { background-position: -186px -474px; width: 58px; height: 40px;
+	&.active {
+		background-position: -186px -474px;
+	}
+}
+a.pb:hover, a.pb { background-position: -10px -1370px; width: 59px; height: 35px;
+	&.active {
+		background-position: -10px -1370px;
+	}
+}
+a.pe:hover, a.pe { background-position: -10px -1415px; width: 97px; height: 34px;
+	&.active {
+		background-position: -10px -1415px;
+	}
+}
+a.rn:hover, a.rn { background-position: -186px -524px; width: 53px; height: 33px;
+	&.active {
+		background-position: -186px -524px;
+	}
+}
+a.se:hover, a.se { background-position: -208px -61px; width: 28px; height: 32px;
+	&.active {
+		background-position: -208px -61px;
+	}
+}
+a.al:hover, a.al { background-position: -208px -103px; width: 46px; height: 27px;
+	&.active {
+		background-position: -208px -103px;
+	}
+}
+a.df:hover, a.df { background-position: -208px -140px; width: 16px; height: 9px;
+	&.active {
+		background-position: -208px -140px;
+	}
+}
+
+/*ul.map li a {
+	&.off {
+		background-image: url('../images/sprite-off.png')!important; 
+	
+
+		//&.pa, &.pa:hover, &a.pa { background-position: -10px -0px; width: 188px; height: 187px; }
+		//&.am, &.am:hover, &a.am { background-position: -10px -197px; width: 258px; height: 181px; }
+		&.mt, &.mt:hover, &a.mt { background-position: -10px -388px; width: 166px; height: 161px; }
+		//&.ba, &.ba:hover, &a.ba { background-position: -10px -559px; width: 136px; height: 148px; }
+		/*&.ma:hover, a.ma { background-position: -156px -559px; width: 102px; height: 139px; }
+		&.mg:hover, a.mg { background-position: -10px -717px; width: 163px; height: 131px; }
+		a.to:hover, a.to { background-position: -183px -717px; width: 74px; height: 125px; }
+		a.pi:hover, a.pi { background-position: -10px -858px; width: 83px; height: 124px; }
+		a.go:hover, a.go { background-position: -103px -858px; width: 108px; height: 108px; }
+		a.ms:hover, a.ms { background-position: -103px -976px; width: 106px; height: 104px; }
+		a.rr:hover, a.rr { background-position: -10px -992px; width: 87px; height: 103px; }
+		a.rs:hover, a.rs { background-position: -107px -1090px; width: 116px; height: 101px; }
+		a.ro:hover, a.ro { background-position: -10px -1201px; width: 104px; height: 87px; }
+		a.ap:hover, a.ap { background-position: -10px -1105px; width: 73px; height: 85px; }
+		a.sp:hover, a.sp { background-position: -124px -1201px; width: 131px; height: 84px; }
+		a.ce:hover, a.ce { background-position: -186px -388px; width: 61px; height: 76px; }
+		a.pr:hover, a.pr { background-position: -124px -1295px; width: 97px; height: 64px; }
+		a.ac:hover, a.ac { background-position: -10px -1298px; width: 108px; height: 62px; }
+		a.sc:hover, a.sc { background-position: -128px -1369px; width: 81px; height: 53px; }
+		a.es:hover, a.es { background-position: -208px -0px; width: 33px; height: 51px; }
+		a.rj:hover, a.rj { background-position: -186px -474px; width: 58px; height: 40px; }
+		a.pb:hover, a.pb { background-position: -10px -1370px; width: 59px; height: 35px; }
+		a.pe:hover, a.pe { background-position: -10px -1415px; width: 97px; height: 34px; }
+		a.rn:hover, a.rn { background-position: -186px -524px; width: 53px; height: 33px; }
+		a.se:hover, a.se { background-position: -208px -61px; width: 28px; height: 32px; }
+		a.al:hover, a.al { background-position: -208px -103px; width: 46px; height: 27px; }
+		a.df:hover, a.df { background-position: -208px -140px; width: 16px; height: 9px; }
+	}
+}*/
+
+/* Fim sprite */
+
+ul.map li a img {border: 0; width: inherit; height: inherit;}

@@ -1,5 +1,6 @@
 .slide {
 	height: $hSlide;
+	margin-top: 134px;
 	
 	.item {
 		width: 100%;
@@ -7,6 +8,13 @@
 		background-position: center;
 		background-size: cover;
 		line-height: $hSlide;
+
+		&.video {
+			video {
+				min-width: 100%;
+				min-height: 100%;
+			}
+		}
 
 		.box-height {
 			display: table;

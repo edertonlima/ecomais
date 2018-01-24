@@ -40,7 +40,7 @@
 							
 							<h3>DESENVOLVIMENTO</h3>
 							<div class="content-post cont-box ico-cont">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/lo_ecomais_icones-15.png">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/lo_ecomais_icones-15.png" class="img-ico-cont">
 								<p class="justify"><?php the_field('texto_desenvolvimento'); ?></p>
 							</div>
 
@@ -83,70 +83,6 @@
 				</div>
 			</section>
 		<?php } ?>
-
-		<?php
-			if(is_page('toque-do-chef')){ ?>
-			<section class="box-content">
-				<div class="container">
-
-				<div class="row reduzido">
-
-						<ul class="list-item">
-							<li class="col-6 row-2">
-								<a href="<?php echo get_permalink(get_page_by_path('dicas/toque-do-chef/tempero-da-carne')); ?>" style="background-image: url('<?php the_field('imagem_listagem',get_page_by_path('dicas/toque-do-chef/tempero-da-carne')); ?>');">
-									<div class="cont-list-item-box">
-										<div class="cont-list-item">
-											<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/toque-do-chef/tempero-da-carne')); ?>">
-											<span><?php echo get_the_title(get_page_by_path('dicas/toque-do-chef/tempero-da-carne')); ?></span>
-											<p><?php echo get_the_excerpt(get_page_by_path('dicas/toque-do-chef/tempero-da-carne')); ?></p>
-										</div>
-									</div>
-								</a>
-							</li>
-
-							<li class="col-6">
-								<a href="<?php echo get_permalink(get_page_by_path('dicas/toque-do-chef/carne-de-primeira')); ?>" style="background-image: url('<?php the_field('imagem_listagem',get_page_by_path('dicas/toque-do-chef/carne-de-primeira')); ?>');">
-									<div class="cont-list-item-box">
-										<div class="cont-list-item">
-											<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/toque-do-chef/carne-de-primeira')); ?>">
-											<span><?php echo get_the_title(get_page_by_path('dicas/toque-do-chef/carne-de-primeira')); ?></span>
-											<p><?php echo get_the_excerpt(get_page_by_path('dicas/toque-do-chef/carne-de-primeira')); ?></p>
-										</div>
-									</div>
-								</a>
-							</li>
-
-							<li class="col-6">
-								<a href="<?php echo get_permalink(get_page_by_path('dicas/toque-do-chef/distancia-do-briquete')); ?>" style="background-image: url('<?php the_field('imagem_listagem',get_page_by_path('dicas/toque-do-chef/distancia-do-briquete')); ?>');">
-									<div class="cont-list-item-box">
-										<div class="cont-list-item">
-											<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/toque-do-chef/distancia-do-briquete')); ?>">
-											<span><?php echo get_the_title(get_page_by_path('dicas/toque-do-chef/distancia-do-briquete')); ?></span>
-											<p><?php echo get_the_excerpt(get_page_by_path('dicas/toque-do-chef/distancia-do-briquete')); ?></p>
-										</div>
-									</div>
-								</a>
-							</li>
-
-							<li class="col-12">
-								<a href="<?php echo get_permalink(get_page_by_path('dicas/toque-do-chef/carne-x-carne')); ?>" style="background-image: url('<?php the_field('imagem_listagem',get_page_by_path('dicas/toque-do-chef/carne-x-carne')); ?>');">
-									<div class="cont-list-item-box">
-										<div class="cont-list-item">
-											<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/toque-do-chef/carne-x-carne')); ?>">
-											<span><?php echo get_the_title(get_page_by_path('dicas/toque-do-chef/carne-x-carne')); ?></span>
-											<p><?php echo get_the_excerpt(get_page_by_path('dicas/toque-do-chef/carne-x-carne')); ?></p>
-										</div>
-									</div>
-								</a>
-							</li>
-						</ul>
-
-					</div>
-
-				</div>
-			</section>
-			<?php } 
-		?>
 
 		<script type="text/javascript">
 			jQuery(window).load(function(){

@@ -67,6 +67,23 @@ input[type='submit'], .button {
 		background-color: darken($verde-limao, 10%);
 		color: #ffffff;
 	}
+
+	&.calcular, &.novo-calculo {
+		display: block;
+		font-weight: 400;
+		color: #ffffff;
+		font-size: 2rem;
+		line-height: 60px;
+		text-transform: uppercase;
+		float: none;
+		margin: 0 auto;
+		width: 300px;
+		height: auto;
+	}
+
+	&.novo-calculo {
+		margin-top: 50px;
+	}
 }
 
 .select {
