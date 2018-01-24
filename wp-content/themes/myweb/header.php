@@ -239,9 +239,9 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 							</li>
 
 							<li class="submenu <?php if(is_page('churrascometro')){ echo 'active'; } ?>">
-								<a href="<?php echo get_home_url(); ?>/churrascometro" title="">
+								<a href="<?php echo get_home_url(); ?>/dicas/churrascometro" title="">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-musicas.png" class="">
-									churrascometro
+									CHURRASCOMETRO
 								</a>
 							</li>
 						</ul>
