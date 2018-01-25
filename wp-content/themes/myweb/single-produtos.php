@@ -4,7 +4,7 @@
 		<section class="box-content no-padding">
 			<h2>
 				<div class="container">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-nossos-produtos_PB.png">
+					<img src="<?php the_field('ico_preto_produtos','option'); ?>" class="">
 					<span>NOSSOS PRODUTOS</span>
 				</div>
 			</h2>

@@ -54,10 +54,10 @@
 							
 							<h3>Comprometimento</h3>
 							<div class="content-post cont-box">
-								<ul class="comprometimento">
+								<ul class="comprometimento row">
 									<?php while ( have_rows('comprometimento') ) : the_row(); ?>
 
-										<li>
+										<li class="col-4">
 											<img src="<?php the_sub_field('imagem'); ?>" class="" alt="<?php the_sub_field('titulo'); ?>"/>
 											<span><?php the_sub_field('titulo'); ?></span>
 										</li>

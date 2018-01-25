@@ -1,12 +1,7 @@
 @media all and (max-width: 1100px){
 	.nav {
 		ul {
-			width: 660px;
-
 			li {
-				padding: 0 10px;
-				margin: 0;
-
 				.submenu {
 					a {
 						font-size: .8rem;
@@ -23,6 +18,33 @@
 
 	.ico-info {
 		padding: 50px 10px 0!important;
+	}
+}
+
+@media all and (max-width: 960px){
+	.list-item {
+		&.list-produto {
+			li {
+				height: 300px!important;
+				width: 300px!important;
+			}
+
+			a {
+				height: 300px!important;
+				width: 300px!important;
+
+				.cont-list-item-box {
+					height: 300px!important;
+					span {
+						font-size: 1.225rem;
+						line-height: 1.5rem;
+					}
+					p {
+						display: none;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -43,9 +65,35 @@
 
 					.col {
 						width: 100%;
+						max-width: 400px;
+						margin: 0;
+						clear: both;
+
+						&:last-child {
+							margin-top: 20px;
+							max-width: 100%;
+						}
 					}
 				}
 			}
+		}
+	}
+
+	.corte-carne {
+		padding: 30px 20px;
+	}
+
+	.itens_corte_carneprimeira {
+		padding: 0!important;
+
+		.col-6 {
+			width: 100%;
+			float: none;
+			display: block;
+			max-width: 400px;
+			margin: 0 auto 60px;
+			padding: 0 !important;
+			overflow: hidden;
 		}
 	}
 }
@@ -83,8 +131,10 @@
 	}
 
 	h1 {
-		margin: 0;
+		margin: 5px 0 0;
+		max-width: 160px;
 	}
+
 	.nav {
 		ul {
 			> li:not(.menu-home) {
@@ -248,7 +298,7 @@
 	}
 
 	ul.map {
-		display: none;
+		display: none!important;
 	}
 
 	.list-representantes {
@@ -320,13 +370,16 @@
 	}
 
 	.comprometimento {
-		text-align: center;
-
 		li {
-			display: block;
-			width: 100%;
+			width: 100%!important;
 			text-align: center;
 			margin-bottom: 50px;
+			padding: 0 50px;
+
+			span {
+				font-size: 1rem;
+				line-height: 1.225rem;
+			}
 
 			&:last-child {
 				margin-bottom: 0;
@@ -335,23 +388,46 @@
 	}
 
 	h3 {
-		padding-left: 0;
+		padding-left: 46px;
+		font-size: 1.5rem;
 	}
 
 	.box-content {
 		.cont-box.ico-cont {
+			padding: 20px;
+
 			&.itens_detalhes {
 				padding: 40px 20px;
-
-				.img-ico-cont {
-					display: none;
-				}
-
-				p {
-					padding: 0;
-				}
-
 			}
+		}
+
+		.img-ico-cont {
+			top: -46px;
+			left: 20px;
+			max-width: 100%;
+			max-height: 35px;
+		}
+
+		p {
+			padding: 0!important;
+		}
+	}
+
+	.itens_descricao {
+		padding: 0!important;
+		li {
+			width: 100%!important;
+		}
+	}
+
+	.itens_cortes {
+		img {
+			padding: 0!important;
+			width: 60%!important;
+		}
+
+		.itens_cortes_txt {
+			width: 30%!important;
 		}
 	}
 
@@ -399,6 +475,20 @@
 			padding: 20px 10px 50px;
 		}
 	}
+
+	.corte-carne {
+		li {
+			width: 50%!important;
+
+			&:nth-child(3n+1){
+				clear: none!important;
+			}
+		}
+	}
+
+	.distancia-bottom {
+		padding: 0!important;
+	}
 }
 
 @media all and (max-width: 550px){
@@ -408,6 +498,14 @@
 				display: block;
 				margin: 0 auto 5px;
 			}
+		}
+	}
+
+	.distancia-bottom {
+		margin: 0!important;
+		li {
+			width: 100%!important;
+			padding: 0!important;
 		}
 	}
 }
@@ -454,6 +552,23 @@
 				display: inline-block;
 				margin: 0;
 			}
+		}
+	}
+
+	.corte-carne {
+		li {
+			width: 100%!important;
+		}
+	}
+
+	.itens_cortes {
+		img {
+			width: 100%!important;
+		}
+
+		.itens_cortes_txt {
+			width: 100%!important;
+			margin: 20px 0 0 0!important;
 		}
 	}
 }

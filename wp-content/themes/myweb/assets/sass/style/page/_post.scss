@@ -52,6 +52,7 @@
 				font-size: 2rem;
 				line-height: 2.5rem;
 				border-bottom: 4px solid $verde-limao;
+				text-transform: uppercase;
 			}
 
 			p {
@@ -76,6 +77,26 @@
 				.cont-list-item-box {
 					height: 70.56vh;
 				}
+			}
+		}
+	}
+
+	&.list-produto {
+		text-align: center;
+		li {
+			height: 460px;
+			width: 460px;
+			display: inline-block;
+			margin: 50px 0;
+		}
+
+		a {
+			height: 460px;
+			width: 460px;
+			background-size: 100%;
+
+			.cont-list-item-box {
+				height: 460px;
 			}
 		}
 	}

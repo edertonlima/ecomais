@@ -65,6 +65,14 @@
 				color: $verde-limao;
 				text-shadow: none;
 			}
+
+			&.left {
+				left: 0;
+			}
+
+			&:right {
+				right: 0;
+			}
 		}
 	}
 }

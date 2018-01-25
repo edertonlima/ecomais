@@ -3,7 +3,7 @@
 	<section class="box-content no-padding">
 		<h2>
 			<div class="container">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-nossos-produtos_PB.png">
+				<img src="<?php the_field('ico_preto_produtos','option'); ?>" class="">
 				<span>NOSSOS PRODUTOS</span>
 			</div>
 		</h2>
@@ -35,24 +35,18 @@
 	<section class="box-content">
 		<div class="container">
 
-			<div class="row reduzido">
+			<div class="reduzido">
 
-				<ul class="list-item">
+				<ul class="list-item list-produto">
 
-					<?php while ( have_posts() ) : the_post();
-						$qtd_prod = $qtd_prod+1;
-
-						if($qtd_prod == 1){
-							$col = 'col-12';
-						}else{
-							$col = 'col-6';
-						} ?>
+					<?php while ( have_posts() ) : the_post(); 
+						$imagem = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' ); ?>
 									
-						<li class="col-6 <?php echo $col; ?>">
-							<a href="<?php the_permalink(); ?>" style="background-image: url('<?php the_field('imagem_listagem'); ?>');">
+						<li class="">
+							<a href="<?php the_permalink(); ?>" style="background-image: url('<?php echo $imagem[0]; ?>">
 								<div class="cont-list-item-box">
 									<div class="cont-list-item">
-										<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-nossos-produtos.png">
+										<img src="<?php the_field('ico_colorido_produtos','option'); ?>">
 										<span><?php the_title(); ?></span>
 										<p><?php the_excerpt(); ?></p>
 									</div>

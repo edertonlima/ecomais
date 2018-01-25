@@ -223,6 +223,7 @@ body * {
 
 			&.itens_detalhes {
 				padding: 0 0px 0 140px;
+				float: left;
 
 				.box-distancia {
 					padding: 20px 50px 20px 0;
@@ -238,6 +239,32 @@ body * {
 						img {
 							margin-top: 15px;
 							max-width: 100%;
+						}
+
+						.tempo, .distancia {
+							float: left;
+
+							span {
+								font-size: .8rem;
+								display: block;
+								text-align: center;
+							}
+
+							img {
+								width: 95%;
+								display: block;
+								margin: 0 auto 5px;;
+							}
+						}
+
+						.tempo {
+							width: 20%;
+						}
+
+						.distancia {
+							width: 70%;
+							margin-left: 10%;
+							margin-top: 25px;
 						}
 					}
 

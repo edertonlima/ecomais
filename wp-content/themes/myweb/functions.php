@@ -122,6 +122,12 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Músicas',
 		'parent_slug'	=> 'configuracoes-geral',
 	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Produtos',
+		'menu_title'	=> 'Produtos',
+		'parent_slug'	=> 'configuracoes-geral',
+	));
 }
 
 /* PAGINAÇÃO */

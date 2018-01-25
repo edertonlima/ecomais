@@ -3,11 +3,25 @@
 		<section class="box-content no-padding">
 			<h2>
 				<div class="container">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-nossos-produtos_PB.png">
+					<img src="<?php the_field('ico_preto_produtos','option'); ?>" class="">
 					<span>NOSSOS PRODUTOS</span>
 				</div>
 			</h2>
 		</section>
+
+		<?php 
+			if(get_field('descricao_produtos','option')){ ?>
+				<section class="box-content cinza">
+					<div class="container">
+						
+						<div class="content-post">
+							<?php the_field('descricao_produtos','option'); ?>
+						</div>
+
+					</div>
+				</section>
+			<?php }
+		?>
 
 		<section class="box-content">
 			<div class="container">
@@ -41,7 +55,7 @@
 									<a href="<?php echo get_term_link($categoria->term_id); ?>" style="background-image: url('<?php the_field('imagem_listagem', $field_cat); ?>');">
 										<div class="cont-list-item-box">
 											<div class="cont-list-item">
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-nossos-produtos.png">
+												<img src="<?php the_field('ico_colorido_produtos','option'); ?>" class="">
 												<span><?php echo $categoria->name; ?></span>
 												<p><?php echo $categoria->description; ?></p>
 											</div>

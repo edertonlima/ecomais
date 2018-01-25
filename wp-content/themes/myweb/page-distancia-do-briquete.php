@@ -53,8 +53,8 @@
 		<section class="box-content">
 			<div class="container">
 
-				<?php if( have_rows('itens_detalhes') ): ?>
-					<?php while ( have_rows('itens_detalhes') ) : the_row(); ?>
+				<?php if( have_rows('itens_detalhes_distancia') ): ?>
+					<?php while ( have_rows('itens_detalhes_distancia') ) : the_row(); ?>
 									
 						<h3><?php the_sub_field('titulo'); ?></h3>
 						<div class="content-post cont-box ico-cont itens_detalhes">
@@ -62,14 +62,35 @@
 								<img src="<?php the_sub_field('icone'); ?>" class="img-ico-cont">
 							<?php } ?>
 							
-							<div class="box-distancia">
-								<div class="col">
-									<img src="<?php the_sub_field('imagem'); ?>" class="img-detalhe">
+							<?php if((get_sub_field('tempo')) and (get_sub_field('distancia'))){ ?>
+								<div class="box-distancia">
+									<div class="col">
+										<div class="tempo">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-relogio.png">
+											<span><?php the_sub_field('tempo'); ?></span>
+										</div>
+										<div class="distancia">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-distancia.png">
+											<span><?php the_sub_field('distancia'); ?></span>
+										</div>
+									</div>
+									<div class="col">
+										<p class="justify"><?php the_sub_field('texto'); ?>
+									</div>
 								</div>
-								<div class="col">
-									<p class="justify"><?php the_sub_field('texto'); ?>
-								</div>
-							</div>							
+							<?php } ?>
+
+							<?php if( have_rows('itens_itens') ): ?>
+								<ul class="distancia-bottom">
+									<?php while (has_sub_field('itens_itens')) { ?>
+										<li>
+											<img src="<?php the_sub_field('imagem'); ?>" class="img-detalhe">
+											<span><?php the_sub_field('titulo'); ?></span>
+											<p class="justify"><?php the_sub_field('texto'); ?></p>
+										</li>
+									<?php } ?>
+								</ul>
+							<?php endif; ?>							
 						</div>
 
 					<?php endwhile; ?>

@@ -73,12 +73,12 @@
 			
 		<ul class="list-item">
 			<li class="col-6">
-				<a href="javascript:" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/produtos.jpg');">
+				<a href="<?php echo get_home_url(); ?>/produtos" style="background-image: url('<?php the_field('imagem_listagem_produtos','option'); ?>');">
 					<div class="cont-list-item-box">
 						<div class="cont-list-item">
-							<img src="<?php the_field('ico_colorido',get_page_by_path('')); ?>" class="">
-							<span>PRODUTO</span>
-							<p>Conheça os briquetes da Ecomais e como são feitos.</p>
+							<img src="<?php the_field('ico_colorido_produtos','option'); ?>" class="">
+							<span>PRODUTOS</span>
+							<p><?php the_field('descricao_listagem_produtos','option'); ?></p>
 						</div>
 					</div>
 				</a>
@@ -97,24 +97,24 @@
 			</li>
 
 			<li class="col-6">
-				<a href="javascript:" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hamonizações.jpg');">
+				<a href="<?php echo get_permalink(get_page_by_path('dicas/harmonizacoes')); ?>" style="background-image: url('<?php the_field('imagem_listagem',get_page_by_path('dicas/harmonizacoes')); ?>');">
 					<div class="cont-list-item-box">
 						<div class="cont-list-item">
-							<img src="<?php the_field('ico_colorido',get_page_by_path('')); ?>" class="">
-							<span>HARMONIZACÕES</span>
-							<p>Para deixar mais delicioso seu churrasco, conheça combinações de bebidas com carnes.</p>
+							<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/harmonizacoes')); ?>" class="">
+							<span><?php echo get_the_title(get_page_by_path('dicas/harmonizacoes')); ?></span>
+							<p><?php echo get_the_excerpt(get_page_by_path('dicas/harmonizacoes')); ?></p>
 						</div>
 					</div>
 				</a>
 			</li>
 
 			<li class="col-6">
-				<a href="javascript:" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/musicas.jpg');">
+				<a href="<?php echo get_home_url(); ?>/musicas" style="background-image: url('<?php the_field('imagem_listagem_musica','option'); ?>');">
 					<div class="cont-list-item-box">
 						<div class="cont-list-item">
-							<img src="<?php the_field('ico_colorido',get_page_by_path('')); ?>" class="">
+							<img src="<?php the_field('ico_colorido_musicas','option'); ?>" class="">
 							<span>MÚSICAS</span>
-							<p>Encontre playlists para você ouvir nos seus churrascos com a sua família e amigos.</p>
+							<p><?php the_field('descricao_listagem_musica','option'); ?></p>
 						</div>
 					</div>
 				</a>
@@ -123,48 +123,6 @@
 
 	</div>
 </section>
-
-<?php /*
-<section class="box-content no-padding onde-comprar" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/mapa.png');">
-	<div class="box-comprar">
-		<span class="tit">ONDE COMPRAR?</span>
-		<div class="select-comprar">
-			<p>Selecione o lugar mais perto para<br>encontrar os produtos Ecomais</p>
-			<div class="col-12">
-				<div class="select">
-					<i class="fa fa-map-marker" aria-hidden="true"></i>
-					<select name="estado" id="estado">
-						<option value="Selecione um Estado">Estado</option>
-						
-						<?php /*
-							foreach ($representantes as $key => $value) { 
-								$estados[] = array(
-									'uf' => $value['uf'],
-									'nome' => $value['estado']
-								);
-							}
-
-							foreach (array_unique($estados) as $estado) { ?>
-								<option value="<?php echo $estado; ?>"><?php echo $estado; ?></option>
-							<?php } */
-						/*?>									
-
-					</select>
-				</div>
-			</div>	
-
-			<div class="col-12">
-				<div class="select">
-					<i class="fa fa-map-marker" aria-hidden="true"></i>
-					<select name="cidade" id="cidade" disabled>
-						<option value="">Cidade</option>
-					</select>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> */ ?>
-
 
 	<?php
 		query_posts(
@@ -243,13 +201,6 @@
 										}
 									?>
 								</select>
-
-								<?php /*<select name="estado" id="estado">
-									<option value="Lojas">Lojas</option>				
-									<option value="Representantes">Representantes</option>
-
-
-								</select> */ ?>
 							</div>
 						</div>
 
@@ -355,33 +306,8 @@
 		});
 		
 	});
-/*
-	jQuery(window).load(function(){
-		jQuery('.grid-item').each(function(){
-			jQuery('.hover-grid',this).height(jQuery(this).height());
-		});
-	});
 
-	jQuery(window).resize(function(){
-		jQuery('.grid-item').each(function(){
-			jQuery('.hover-grid',this).height(jQuery(this).height());
-		});
-	});*/
 </script>
-<?php /*
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/masonry.pkgd.js" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/imagesloaded.pkgd.js" type="text/javascript"></script>
-<script type="text/javascript">
-	var $grid = jQuery('.grid').masonry({
-		itemSelector: '.grid-item',
-		percentPosition: true,
-		columnWidth: '.grid-sizer'
-	});
-	// layout Masonry after each image loads
-	$grid.imagesLoaded().progress( function() {
-		$grid.masonry();
-	});  
-</script>*/ ?>
 
 <script type="text/javascript">
 	<?php 
@@ -423,10 +349,6 @@
 		}		
 		
 	});
-
-	/*jQuery(".enviar").click(function(){
-
-	});*/
 
 	var val_estado_map = '';
 	var val_estado = '';

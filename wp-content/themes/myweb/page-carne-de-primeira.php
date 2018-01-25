@@ -53,18 +53,41 @@
 		<section class="box-content">
 			<div class="container">
 
-				<?php if( have_rows('itens_detalhes') ): ?>
-					<?php while ( have_rows('itens_detalhes') ) : the_row(); ?>
+				<?php if( have_rows('itens_detalhes_carne_primeira') ): ?>
+					<?php while ( have_rows('itens_detalhes_carne_primeira') ) : the_row(); ?>
 									
 						<h3><?php the_sub_field('titulo'); ?></h3>
-						<div class="content-post cont-box ico-cont itens_detalhes">
+						<div class="content-post cont-box ico-cont tempero-da-carne">
 							<?php if(get_sub_field('icone')){ ?>
 								<img src="<?php the_sub_field('icone'); ?>" class="img-ico-cont">
 							<?php } ?>
 							<p class="justify">
 								<?php the_sub_field('texto'); ?>
-								<img src="<?php the_sub_field('imagem'); ?>" class="img-detalhe">
 							</p>
+							<img src="<?php the_sub_field('imagem_carne_primeira'); ?>" class="img-destaque-item">
+							
+							<?php if( have_rows('cortes') ): ?>
+								<ul class="itens_corte_carneprimeira row">
+									<?php while (has_sub_field('cortes')) { 
+										$cor = ' style="color: '.get_sub_field('cor').';"'; ?>
+										<li class="col-6">
+											<h4<?php echo $cor; ?>><?php the_sub_field('titulo'); ?></h3>
+											<p class="justify"><?php the_sub_field('texto'); ?></p>
+											<div class="tempo">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-relogio.png">
+												<span><?php the_sub_field('tempo'); ?></span>
+											</div>
+
+											<div class="ponto">
+												<img src="<?php the_sub_field('ponto_da_carne'); ?>">
+												<span class="ponto1">Mal passada</span>
+												<span class="ponto2">Ao ponto</span>
+												<span class="ponto3">Bem passada</span>
+											</div>
+										</li>
+									<?php } ?>
+								</ul>
+							<?php endif; ?>	
 						</div>
 
 					<?php endwhile; ?>
