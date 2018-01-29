@@ -182,7 +182,7 @@
 						</label>
 					</div>
 
-					<a href="javascript:" class="button calcular">CALULAR!</a>
+					<a href="javascript:" class="button calcular">CACULAR!</a>
 				</div>
 
 				<div id="resultado">

@@ -40,7 +40,35 @@ form {
 	}
 
 	fieldset {
-		margin-top: 20px;
+		
+	}
+}
+
+fieldset {
+	&:first-child {
+		margin: 0;
+	}
+
+	&.erro {
+		input, textarea {
+			border-color: red;
+
+			&::-webkit-input-placeholder {
+				color: red;
+			}
+
+			&:-moz-placeholder {
+				color: red; 
+			}
+
+			&::-moz-placeholder {
+				color: red;
+			}
+
+			&:-ms-input-placeholder {  
+				color: red;
+			}
+		}
 	}
 }
 
@@ -156,4 +184,7 @@ input::-webkit-input-placeholder {
 .msg-form {
 	text-align: center;
 	font-size: 1rem;
+	line-height: 1.225rem;
+	padding: 0 !important;
+	width: 100%;
 }

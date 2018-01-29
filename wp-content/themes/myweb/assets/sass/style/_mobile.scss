@@ -25,16 +25,16 @@
 	.list-item {
 		&.list-produto {
 			li {
-				height: 300px!important;
-				width: 300px!important;
+				height: 380px!important;
+				width: 380px!important;
 			}
 
 			a {
-				height: 300px!important;
-				width: 300px!important;
+				height: 380px!important;
+				width: 380px!important;
 
 				.cont-list-item-box {
-					height: 300px!important;
+					height: 380px!important;
 					span {
 						font-size: 1.225rem;
 						line-height: 1.5rem;
@@ -49,11 +49,21 @@
 }
 
 @media all and (max-width: 900px){
+	.contato {
+		margin: 0 !important;
+		.col-6 {
+			width: 100%!important;
+		}
+	}
+
 	.endereco {
 		padding-top: 0;
 		.col-6 {
 			width: 100%;
-			margin-top: 50px;
+
+			&:last-child {
+				margin-top: 30px;
+			}
 		}
 	}
 
@@ -124,6 +134,10 @@
 
 
 @media all and (max-width: 700px){
+	.contato {
+		padding: 30px;
+	}
+
 	.endereco {
 		.col-6 {
 			margin-top: 30px;
@@ -492,6 +506,10 @@
 }
 
 @media all and (max-width: 550px){
+	.contato {
+		padding: 0px;
+	}
+
 	.churrascometro {
 		.qtd_pessoas {
 			img {
@@ -569,6 +587,41 @@
 		.itens_cortes_txt {
 			width: 100%!important;
 			margin: 20px 0 0 0!important;
+		}
+	}
+
+	.endereco {
+		padding: 0!important;
+		margin: 0!important;
+
+		i {
+			font-size: 2.5rem;
+		}
+
+		.col-6 {
+			padding: 0!important;
+			margin-left: 0!important;
+		}
+	}
+}
+
+
+@media all and (max-width: 400px){
+	.list-item {
+		&.list-produto {
+			li {
+				height: 300px!important;
+				width: 300px!important;
+			}
+
+			a {
+				height: 300px!important;
+				width: 300px!important;
+
+				.cont-list-item-box {
+					height: 300px!important;
+				}
+			}
 		}
 	}
 }
