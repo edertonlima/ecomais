@@ -233,14 +233,14 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 							<li class="submenu <?php if((is_post_type_archive('musicas')) or is_singular('musicas')){ echo 'active'; } ?>">
 								<a href="<?php echo get_home_url(); ?>/musicas" title="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-musicas.png" class="">
+									<img src="<?php the_field('ico_colorido_musicas','option'); ?>">
 									MÚSICAS
 								</a>
 							</li>
 
 							<li class="submenu <?php if(is_page('churrascometro')){ echo 'active'; } ?>">
 								<a href="<?php echo get_home_url(); ?>/dicas/churrascometro" title="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/ico-musicas.png" class="">
+									<img src="<?php the_field('ico_colorido',get_page_by_path('dicas/churrascometro')); ?>">
 									CHURRASCOMETRO
 								</a>
 							</li>

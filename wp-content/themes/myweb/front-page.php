@@ -15,9 +15,17 @@
 						if(get_sub_field('video')){ ?>
 
 							<div class="item video <?php if($slide == 1){ echo 'active'; } ?>">
-								<video autoplay="true" loop="true" muted="true">
-									<source src="<?php the_sub_field('video'); ?>" type="video/mp4">
-								</video>
+								<?php if(get_sub_field('url')){ ?>
+									<a href="<?php the_sub_field('url'); ?>">
+								<?php } ?>
+
+									<video autoplay="true" loop="true" muted="true">
+										<source src="<?php the_sub_field('video'); ?>" type="video/mp4">
+									</video>
+
+								<?php if(get_sub_field('url')){ ?>
+									</a>
+								<?php } ?>
 							</div>
 
 						<?php }else{
@@ -25,18 +33,24 @@
 							if(get_sub_field('imagem')){ ?>
 
 								<div class="item <?php if($slide == 1){ echo 'active'; } ?>" style="background-image: url('<?php the_sub_field('imagem'); ?>');">
+									<?php if(get_sub_field('url')){ ?>
+										<a href="<?php the_sub_field('url'); ?>">
+									<?php } ?>
 
-									<div class="box-height">
-										<div class="box-texto">
-											
-											<p class="texto"><?php the_sub_field('texto'); ?></p>
-											<?php if(get_sub_field('sub_texto')){ ?>
-												<p class="sub-texto"><?php the_sub_field('sub_texto'); ?></p>
-											<?php } ?>
+										<div class="box-height">
+											<div class="box-texto">
+												
+												<p class="texto"><?php the_sub_field('texto'); ?></p>
+												<?php if(get_sub_field('sub_texto')){ ?>
+													<p class="sub-texto"><?php the_sub_field('sub_texto'); ?></p>
+												<?php } ?>
 
+											</div>
 										</div>
-									</div>
-									
+
+									<?php if(get_sub_field('url')){ ?>
+										</a>
+									<?php } ?>									
 								</div>
 
 							<?php }
@@ -272,7 +286,14 @@
 <?php get_footer(); ?>
 
 <script type="text/javascript">
-	jQuery(document).ready(function(){	  
+	jQuery(document).ready(function(){
+
+		jQuery('.slide video').each(function(){
+			height_slide = jQuery('.slide .item').height();
+			height_video = jQuery(this).height();
+			margin_video = ((height_video-height_slide)/2)*(-1);
+			jQuery(this).css('top',margin_video);
+		});
 
 		// FORM
 		jQuery(".enviar").click(function(){

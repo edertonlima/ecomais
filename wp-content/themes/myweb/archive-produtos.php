@@ -28,9 +28,40 @@
 
 			<div class="row reduzido">
 
+				<ul class="list-item list-produto">
+
+					<?php /* $args = array(
+					    'taxonomy'      => 'produtos_taxonomy',
+					    'parent'        => 0,
+					    'orderby'       => 'name',
+					    'order'         => 'ASC',
+					    'hierarchical'  => 1,
+					    'pad_counts'    => 0
+					); */ ?>
+
+					<?php while ( have_posts() ) : the_post(); 
+						$imagem = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' ); ?>
+									
+						<li class="">
+							<a href="<?php the_permalink(); ?>" style="background-image: url('<?php echo $imagem[0]; ?>">
+								<div class="cont-list-item-box">
+									<div class="cont-list-item">
+										<img src="<?php the_field('ico_colorido_produtos','option'); ?>">
+										<span><?php the_title(); ?></span>
+										<p><?php the_excerpt(); ?></p>
+									</div>
+								</div>
+							</a>
+						</li>
+
+					<?php endwhile;	?>
+
+				</ul>
+
+				<?php /*
 					<ul class="list-item list-tipo2">
 
-						<?php
+						<?php /*
 							$qtd_prod = 0;
 							$args = array(
 							    'taxonomy'      => 'produtos_taxonomy',
@@ -63,10 +94,10 @@
 									</a>
 								</li>
 
-							<?php }
+							<?php } 
 						?>
 
-					</ul>
+					</ul> */ ?>
 
 				</div>
 
