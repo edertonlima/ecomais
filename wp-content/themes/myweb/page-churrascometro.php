@@ -97,27 +97,32 @@
 					</div>
 					<div class="box-content churrascometro cinza">
 						<label class="item">
-							<input type="checkbox" name="carne1" homem="0.110" mulher="0.078" crianca="0.073">
-							Carne bovina sem osso (vazio / picanha / entrecorte / maminha / alcatra)
+							<input type="checkbox" name="carne1" tipo="carne">
+							Carne bovina sem osso (picanha / entrecorte / maminha / alcatra)
 						</label>
 
 						<label class="item">
-							<input type="checkbox" name="carne2" homem="0.139" mulher="0.078" crianca="0.073">
+							<input type="checkbox" name="carne2" tipo="carne">
 							Carne bovina com osso (ripa / costela)
 						</label>
 
 						<label class="item">
-							<input type="checkbox" name="carne3" homem="0.110" mulher="0.078" crianca="0.073">
+							<input type="checkbox" name="carne3" tipo="carne">
+							Frango
+						</label>
+
+						<label class="item">
+							<input type="checkbox" name="carne4" tipo="carne">
 							Suíno / Ovino
 						</label>
 
 						<label class="item">
-							<input type="checkbox" name="carne4" homem="0.110" mulher="0.078" crianca="0.073">
+							<input type="checkbox" name="carne5" tipo="carne">
 							Coração de Frango
 						</label>
 
 						<label class="item">
-							<input type="checkbox" name="carne5" homem="0.110" mulher="0.078" crianca="0.073">
+							<input type="checkbox" name="carne6" tipo="carne">
 							Linguiça / Salsichão
 						</label>
 
@@ -130,33 +135,33 @@
 					</div>
 					<div class="box-content churrascometro cinza">
 						<label class="item">
-							<input type="checkbox" name="acompanhamentos1" homem="0" mulher="0" crianca="0">
-							Alface
-						</label>
-
-						<label class="item">
-							<input type="checkbox" name="acompanhamentos2" homem="0" mulher="0" crianca="0">
-							Tomate
-						</label>
-
-						<label class="item">
-							<input type="checkbox" name="acompanhamentos3" homem="0" mulher="0" crianca="0">
+							<input type="checkbox" name="acompanhamentos1" tipo="acompanhamentos">
 							Arroz
 						</label>
 
 						<label class="item">
-							<input type="checkbox" name="acompanhamentos4" homem="0" mulher="0" crianca="0">
+							<input type="checkbox" name="acompanhamentos2" tipo="acompanhamentos">
 							Maionese
 						</label>
 
 						<label class="item">
-							<input type="checkbox" name="acompanhamentos5" homem="0" mulher="0" crianca="0">
+							<input type="checkbox" name="acompanhamentos3" tipo="acompanhamentos">
+							Abacaxi com Canela
+						</label>
+
+						<label class="item">
+							<input type="checkbox" name="acompanhamentos4" tipo="acompanhamentos">
 							Pão de Alho
 						</label>
 
 						<label class="item">
-							<input type="checkbox" name="acompanhamentos6" homem="0" mulher="0" crianca="0">
-							Abacaxi com Canela
+							<input type="checkbox" name="acompanhamentos5" tipo="acompanhamentos">
+							Tomate
+						</label>
+
+						<label class="item">
+							<input type="checkbox" name="acompanhamentos6" tipo="acompanhamentos">
+							Alface
 						</label>
 					</div>
 
@@ -167,17 +172,17 @@
 					</div>
 					<div class="box-content churrascometro cinza">
 						<label class="item">
-							<input type="checkbox" name="bebidas1" homem="0" mulher="0" crianca="0">
+							<input type="checkbox" name="bebidas1" tipo="bebidas">
 							Cerveja
 						</label>
 
 						<label class="item">
-							<input type="checkbox" name="bebidas2" homem="0" mulher="0" crianca="0">
+							<input type="checkbox" name="bebidas2" tipo="bebidas">
 							Refrigerante
 						</label>
 
 						<label class="item">
-							<input type="checkbox" name="bebidas3" homem="0" mulher="0" crianca="0">
+							<input type="checkbox" name="bebidas3" tipo="bebidas">
 							Água
 						</label>
 					</div>
@@ -193,9 +198,9 @@
 					</div>
 
 					<div class="box-content cinza resultado">
-						<span class="tit first-child">QUANTIDADE DE CARNE</span>
+						<span class="tit tit-result-carne first-child">QUANTIDADE DE CARNE</span>
 						<span class="item" id="carne1">
-							Carne bovina sem osso (vazio / picanha / entrecorte / maminha / alcatra)
+							Carne bovina sem osso (picanha / entrecorte / maminha / alcatra)
 							<span class="cont-result"><span class="resultado"></span>kg</span>
 						</span>
 						<span class="item" id="carne2">
@@ -203,48 +208,52 @@
 							<span class="cont-result"><span class="resultado"></span>kg</span>
 						</span>
 						<span class="item" id="carne3">
-							Suíno / Ovino
+							Frango
 							<span class="cont-result"><span class="resultado"></span>kg</span>
 						</span>
 						<span class="item" id="carne4">
-							Coração de Frango
+							Suíno / Ovino
 							<span class="cont-result"><span class="resultado"></span>kg</span>
 						</span>
 						<span class="item" id="carne5">
+							Coração de Frango
+							<span class="cont-result"><span class="resultado"></span>kg</span>
+						</span>
+						<span class="item" id="carne6">
 							Linguiça / Salsichão
 							<span class="cont-result"><span class="resultado"></span>kg</span>
 						</span>
 
-						<span class="tit">QUANTIDADE DE ACOMPANHAMENTOS</span>
+						<span class="tit tit-result-acompanhamentos">QUANTIDADE DE ACOMPANHAMENTOS</span>
 						<span class="item" id="acompanhamentos1">
-							Alface
-							<span class="cont-result"><span class="resultado"></span>kg</span>
-						</span>
-						<span class="item" id="acompanhamentos2">
-							Tomate
-							<span class="cont-result"><span class="resultado"></span>kg</span>
-						</span>
-						<span class="item" id="acompanhamentos3">
 							Arroz
 							<span class="cont-result"><span class="resultado"></span>kg</span>
 						</span>
-						<span class="item" id="acompanhamentos4">
+						<span class="item" id="acompanhamentos2">
 							Maionese
 							<span class="cont-result"><span class="resultado"></span>kg</span>
 						</span>
-						<span class="item" id="acompanhamentos5">
+						<span class="item" id="acompanhamentos3">
+							Abacaxi com Canela
+							<span class="cont-result"><span class="resultado"></span>uni.</span>
+						</span>
+						<span class="item" id="acompanhamentos4">
 							Pão de Alho
-							<span class="cont-result"><span class="resultado"></span>kg</span>
+							<span class="cont-result"><span class="resultado"></span>uni.</span>
+						</span>
+						<span class="item" id="acompanhamentos5">
+							Tomate
+							<span class="cont-result"><span class="resultado"></span>uni.</span>
 						</span>
 						<span class="item" id="acompanhamentos6">
-							Abacaxi com Canela
-							<span class="cont-result"><span class="resultado"></span>kg</span>
+							Alface
+							<span class="cont-result"><span class="resultado"></span>uni.</span>
 						</span>
 
-						<span class="tit">QUANTIDADE DE BEBIDAS</span>
+						<span class="tit tit-result-bebidas">QUANTIDADE DE BEBIDAS</span>
 						<span class="item" id="bebidas1">
 							Cerveja
-							<span class="cont-result"><span class="resultado"></span>Litros</span>
+							<span class="cont-result"><span class="resultado"></span>Latas</span>
 						</span>
 						<span class="item" id="bebidas2">
 							Refrigerante
@@ -255,7 +264,7 @@
 							<span class="cont-result"><span class="resultado"></span>Litros</span>
 						</span>
 
-						<span class="tit">SAL E CARVÃO</span>
+						<span class="tit tit-result-sal-carvao">SAL E CARVÃO</span>
 						<span class="item" id="sal">
 							Sal
 							<span class="cont-result"><span class="resultado"></span>kg</span>
@@ -300,72 +309,176 @@
 					jQuery('#resultado .item .resultado').html('');
 					jQuery('.msg').html('');
 
-					homem_status = false;
-					mulher_status = false;
-					crianca_status = false;
-
 					var qtd_homem = jQuery('#homem').html();
 					var qtd_mulher = jQuery('#mulher').html();
 					var qtd_crianca = jQuery('#crianca').html();
 
-					var resultado_homem = 0;
-					var resultado_mulher = 0;
-					var resultado_crianca = 0;
-					
-					var checkbox = false;
-					jQuery('input:checkbox:checked').each(function(){
-						checkbox = true;
-						var homem = jQuery(this).attr('homem');
-						var mulher = jQuery(this).attr('mulher');
-						var crianca = jQuery(this).attr('crianca');
-						var nome = '#'+jQuery(this).attr('name');
-						var elem_resultado = nome+' .resultado';
+					var peso_carne = 0;
 
-						if(qtd_homem > 0){
-							resultado_homem = (qtd_homem*homem);
-							homem_status = true;
-						}
-						if(qtd_mulher > 0){
-							resultado_mulher = (qtd_mulher*mulher);
-							mulher_status = true;
-						}
-						if(qtd_crianca > 0){
-							resultado_crianca = (qtd_crianca*crianca);
-							crianca_status = true;
-						}
+					if((qtd_homem > 0) || (qtd_mulher > 0) || (qtd_crianca > 0)) {
 
-						if((homem_status) || (mulher_status) || (crianca_status)) {
-							var resultado = parseFloat(resultado_homem)+parseFloat(resultado_mulher)+parseFloat(resultado_crianca);
+						var checkbox = false;
+						var val_carne = '';
+						var val_acompanhamentos = '';
+						var val_bebidas = '';
 
-							jQuery('#calculo').hide();
+						jQuery('input:checkbox').each(function(){
 
-							jQuery('#resultado').show();
-							jQuery(nome).show();
-							jQuery(elem_resultado).html((resultado.toFixed(2)).replace('.', ','));
+							if(jQuery(this).is(':checked')){
+								checkbox = true;
 
-							jQuery('#sal').show();
-							jQuery('#sal .resultado').html('0');
-							jQuery('#carvao').show();
-							jQuery('#carvao .resultado').html('0');
+								if(jQuery(this).attr('tipo') == 'carne'){
+									val_carne = val_carne+'1';
+								}
+
+								if(jQuery(this).attr('tipo') == 'acompanhamentos'){
+									val_acompanhamentos = val_acompanhamentos+'1';
+								}
+
+								if(jQuery(this).attr('tipo') == 'bebidas'){
+									val_bebidas = val_bebidas+'1';
+								}
+								
+							}else{
+
+								if(jQuery(this).attr('tipo') == 'carne'){
+									val_carne = val_carne+'0';
+								}
+
+								if(jQuery(this).attr('tipo') == 'acompanhamentos'){
+									val_acompanhamentos = val_acompanhamentos+'0';
+								}
+
+								if(jQuery(this).attr('tipo') == 'bebidas'){
+									val_bebidas = val_bebidas+'0';
+								}
+
+							}
+						});
+
+						if(checkbox){
+							jQuery.getJSON('<?php echo get_template_directory_uri(); ?>/variavel_calc.json', function (data) {
+
+								jQuery('#calculo').hide();
+								jQuery('#resultado').show();
+		 						
+		 						if(val_carne != 000000){ //alert('tem carne');
+		 							jQuery('.tit-result-carne').show();
+									jQuery.each( data, function( key, val ) { //alert('linha = '+key);
+
+										if(key == val_carne){ //alert('achou');
+											carne_h = val[0].homem;
+											carne_m = val[0].mulher;
+											carne_c = val[0].crianca;
+											for(var i=0; i<6; i++){
+												if(carne_h[i] != 0){ //alert(carne_h[i]);
+													calc_carne_h = qtd_homem*carne_h[i]; //alert('calculo homem = '+calc_carne_h);
+													calc_carne_m = qtd_mulher*carne_m[i]; //alert('calculo mulher = '+calc_carne_m);
+													calc_carne_c = qtd_crianca*carne_c[i]; //alert('calculo crianca = '+calc_carne_c);
+
+													calc_carne = calc_carne_h+calc_carne_m+calc_carne_c;
+													peso_carne = peso_carne+calc_carne; //alert('peso carne = '+peso_carne);
+
+													jQuery('#carne'+(i+1)).show();
+													jQuery('#carne'+(i+1)+' .resultado').html(calc_carne.toFixed(2).replace('.', ','));
+												}
+											}
+										}
+
+									});
+
+									if(Math.ceil(peso_carne) <= 4){
+										qtd_brinquetes = '2,5';
+									}else{
+										if(Math.ceil(peso_carne) > 8){
+											qtd_brinquetes = '7,5';
+										}else{
+											qtd_brinquetes = '5';
+										}
+									}
+
+									jQuery('.tit-result-sal-carvao').show();
+									jQuery('#carvao').show();
+									jQuery('#carvao .resultado').html(qtd_brinquetes);
+
+								}
+
+								if(val_acompanhamentos != '000000'){
+									if(val_acompanhamentos == '100000'){
+										var acompanhamentos_h = [0.07,0,0,0,0,0];
+										var acompanhamentos_m = [0.065,0,0,0,0,0];
+										var acompanhamentos_c = [0.036,0,0,0,0,0];
+									}else{
+										var acompanhamentos_h = [0.035,0.075,3,1,1,1];
+										var acompanhamentos_m = [0.028,0.06,3,1,1,1];
+										var acompanhamentos_c = [0.018,0.038,2,1,1,1];
+									}
+
+									jQuery('.tit-result-acompanhamentos').show();
+									for(var i=0; i<6; i++){
+										if(val_acompanhamentos[i] != 0){ //alert(val_acompanhamentos[i]);
+											calc_acompanhamentos_h = qtd_homem*acompanhamentos_h[i]; //alert('calculo homem = '+calc_carne_h);
+											calc_acompanhamentos_m = qtd_mulher*acompanhamentos_m[i]; //alert('calculo mulher = '+calc_carne_m);
+											calc_acompanhamentos_c = qtd_crianca*acompanhamentos_c[i]; //alert('calculo crianca = '+calc_carne_c);
+
+											calc_acompanhamentos = calc_acompanhamentos_h+calc_acompanhamentos_m+calc_acompanhamentos_c;
+
+											jQuery('#acompanhamentos'+(i+1)).show();
+											if(i > 1){
+												jQuery('#acompanhamentos'+(i+1)+' .resultado').html(calc_acompanhamentos);
+											}else{
+												jQuery('#acompanhamentos'+(i+1)+' .resultado').html(calc_acompanhamentos.toFixed(2).replace('.', ','));
+											}
+										}
+									}
+								}
+
+								if(val_bebidas != '000'){
+									//if(val_bebidas == '100'){
+										var bebidas_h = [4,1,1];
+										var bebidas_m = [1,1,1];
+										var bebidas_c = [0,1,1];
+									//}
+
+									for(var i=0; i<3; i++){
+										if(val_bebidas[i] != 0){ //alert(val_bebidas[i]);
+											calc_bebidas_h = qtd_homem*bebidas_h[i]; //alert('calculo homem = '+calc_bebidas_h);
+											calc_bebidas_m = qtd_mulher*bebidas_m[i]; //alert('calculo mulher = '+calc_carne_m);
+											calc_bebidas_c = qtd_crianca*bebidas_c[i]; //alert('calculo crianca = '+calc_carne_c);
+
+											calc_bebidas = calc_bebidas_h+calc_bebidas_m+calc_bebidas_c;
+											//alert(calc_bebidas);
+
+											if(calc_bebidas > 0){
+												jQuery('.tit-result-bebidas').show();
+												jQuery('#bebidas'+(i+1)).show();
+												if(i == 0){
+													jQuery('#bebidas'+(i+1)+' .resultado').html(calc_bebidas);
+												}else{
+													jQuery('#bebidas'+(i+1)+' .resultado').html(calc_bebidas.toFixed(2).replace('.', ','));
+												}
+											}
+										}
+									}
+								}
+							});
+
+							jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+
 						}else{
-							jQuery('.msg').html('Você precisa definir a quantidade de pessoas.');
+							jQuery('.msg').html('Você precisa definir pelo menos um item para o seu churrasco.');
 
 							jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 							return false;
 						}
 
-						jQuery("html, body").animate({ scrollTop: 0 }, "slow");
-						return false;
-					});
-
-					if(!checkbox){
-						jQuery('.msg').html('Você precisa definir pelo menos um item.');
+					}else{
+						jQuery('.msg').html('Você precisa definir a quantidade de pessoas.');
 
 						jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 						return false;
 					}
-
-				});
+				});					
 			});
 		</script>
 
