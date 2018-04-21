@@ -187,7 +187,7 @@
 						</label>
 					</div>
 
-					<a href="javascript:" class="button calcular">CACULAR!</a>
+					<a href="javascript:" class="button calcular">CALCULAR!</a>
 				</div>
 
 				<div id="resultado">
@@ -264,13 +264,18 @@
 							<span class="cont-result"><span class="resultado"></span>Litros</span>
 						</span>
 
-						<span class="tit tit-result-sal-carvao">SAL E CARVÃO</span>
+						<span class="tit tit-result-sal-carvao">CARVÃO</span>
+						<?php /*<span class="tit tit-result-sal-carvao">SAL E CARVÃO</span>
 						<span class="item" id="sal">
 							Sal
 							<span class="cont-result"><span class="resultado"></span>kg</span>
-						</span>
+						</span>*/?>
 						<span class="item" id="carvao">
 							<strong>Brinquetes EcoMais</strong>
+							<span class="cont-result"><span class="resultado"></span>kg</span>
+						</span>
+						<span class="item" id="mix" style="margin-top: -10px; padding-top: 0;">
+							ou <strong>Mix Carvão com Briquete</strong>
 							<span class="cont-result"><span class="resultado"></span>kg</span>
 						</span>
 					</div>
@@ -387,19 +392,32 @@
 
 									});
 
-									if(Math.ceil(peso_carne) <= 4){
-										qtd_brinquetes = '2,5';
+									/*if(Math.ceil(peso_carne) <= 4){
+										var txt_brinquetes = '2,5';
+										var qtd_brinquetes = '2.5';
 									}else{
 										if(Math.ceil(peso_carne) > 8){
-											qtd_brinquetes = '7,5';
+											var txt_brinquetes = '7,5';
+											var qtd_brinquetes = '7.5';
 										}else{
-											qtd_brinquetes = '5';
+											var txt_brinquetes = '5';
+											var qtd_brinquetes = '5';
 										}
-									}
+									}*/
+
+									var qtd_brinquetes = peso_carne*0.8;
+									var mix = peso_carne;
+									//var sal = peso_carne*0.5;
 
 									jQuery('.tit-result-sal-carvao').show();
 									jQuery('#carvao').show();
 									jQuery('#carvao .resultado').html(qtd_brinquetes);
+
+									jQuery('#mix').show();
+									jQuery('#mix .resultado').html(mix.toFixed(2).replace('.', ','));
+
+									/*jQuery('#sal').show();
+									jQuery('#sal .resultado').html(sal.toFixed(2).replace('.', ','));*/
 
 								}
 
@@ -436,8 +454,8 @@
 								if(val_bebidas != '000'){
 									//if(val_bebidas == '100'){
 										var bebidas_h = [4,1,1];
-										var bebidas_m = [1,1,1];
-										var bebidas_c = [0,1,1];
+										var bebidas_m = [1,0.5,0.5];
+										var bebidas_c = [0,0.5,0.5];
 									//}
 
 									for(var i=0; i<3; i++){
